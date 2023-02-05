@@ -1,5 +1,6 @@
 // Write a function using reference variable as arguments to swap the values of pair of intergers.
 #include <iostream>
+using namespace std;
 
 void swap(int &a, int &b){
     int temp = a;
@@ -9,12 +10,12 @@ void swap(int &a, int &b){
 
 int main(){
     int x, y;
-    std::cout << "Enter value of x: ";
-    std::cin >> x;
-    std::cout << "Enter value of y: ";
-    std::cin >> y;
-    std::cout << "Before swap: x = " << x << ", y = " << y << std::endl;
+    cout << "Enter value of x: ";
+    cin >> x;
+    cout << "Enter value of y: ";
+    cin >> y;
+    cout << "Before swap: x = " << x << ", y = " << y << endl;
     swap(x, y);
-    std::cout << "After swap: x = " << x << ", y = " << y << std::endl;
+    cout << "After swap: x = " << x << ", y = " << y << endl;
     return 0;
 }

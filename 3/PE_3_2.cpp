@@ -2,16 +2,18 @@
 #include <iostream>
 #include <vector>
 
-std::vector<int>* create_vector(int M) {
-    std::vector<int>* v = new std::vector<int>(M);
+using namespace std;
+
+vector<int>* create_vector(int M) {
+    vector<int>* v = new vector<int>(M);
     return v;
 }
 
 int main() {
     int M;
-    std::cout << "Enter the size of the vector: ";
-    std::cin >> M;
-    std::vector<int>* v = create_vector(M);
+    cout << "Enter the size of the vector: ";
+    cin >> M;
+    vector<int>* v = create_vector(M);
     delete v;
     return 0;
 }
