@@ -11,6 +11,7 @@ int main() {
    while (ballot != 0) {
       if (ballot >= 1 && ballot <= numCandidates) {
          count[ballot - 1]++;
+         
       } else {
          spoiltBallots++;
       }
