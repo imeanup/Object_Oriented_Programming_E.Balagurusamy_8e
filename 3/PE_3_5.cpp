@@ -10,8 +10,7 @@ int main() {
    cin >> ballot;
    while (ballot != 0) {
       if (ballot >= 1 && ballot <= numCandidates) {
-         count[ballot - 1]++;
-        
+         count[ballot - 1]++;        
       } else {
          spoiltBallots++;
       }
