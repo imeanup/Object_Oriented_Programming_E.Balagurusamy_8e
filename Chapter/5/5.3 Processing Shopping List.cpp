@@ -61,7 +61,7 @@ int main(){
     order.CNT();
     int x;
     do {
-        cout << "\nYou can do the following;"
+        cout << "\nYou can do the following; "
         <<"Enter appropriate number\n";
         cout << "\n1: Add an item";
         cout << "\n2: Display total value";
