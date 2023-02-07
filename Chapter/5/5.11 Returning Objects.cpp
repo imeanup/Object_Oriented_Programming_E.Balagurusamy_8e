@@ -32,7 +32,7 @@ matrix trans(matrix m1){
     int i, j;
     for(i = 0; i < 3; i++){
         for(j = 0; j < 3; j++){
-            m2.m[i][j] = m1.m[i][j];
+            m2.m[i][j] = m1.m[j][i];
         }
     }
     return(m2);
@@ -74,8 +74,8 @@ You entered the following matrix:
 7       8       9
 
 Transposed matrix: 
-1       2       3
-4       5       6
-7       8       9  
+1       4       7
+2       5       8
+3       6       9 
 
 */
