@@ -2,8 +2,8 @@
 using namespace std;
 
 class addition{
-    public:
     int p, q, r, s;
+public:
     void input(void){
         cout << "Enter three #s \n";
         cin >> p >> q >> r;
