@@ -9,8 +9,13 @@ class addition{
         cin >> p >> q >> r;
     }
     void display(void){
-        cout << p << q << r << endl;
+        cout << "The addition of three numbers: " << add() << endl;
     }
+    int add(void){
+        s = p+q+r;
+        return (s);
+    }
+
 };
 
 int main(){
