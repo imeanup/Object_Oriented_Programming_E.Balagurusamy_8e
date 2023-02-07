@@ -5,7 +5,7 @@ class test
 {
     int code;
     static int count;
-    public:
+public:
     void setcode(void){
         code = ++count;
     }
