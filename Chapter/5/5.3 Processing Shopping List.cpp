@@ -82,3 +82,114 @@ int main(){
     } while(x != 5);
     return 0;
 }
+
+/*
+
+==============================================================================
+| g++ 5.3\ Processing\ Shopping\ List.cpp -o 5.3\ Processing\ Shopping\ List |
+| ./5.3\ Processing\ Shopping\ List                                          |
+==============================================================================
+
+You can do the following;Enter appropriate number
+
+1: Add an item
+2: Display total value
+3: Delete an item
+4: Display all items
+5: Quit
+
+What is your option? 4
+
+Code Price
+
+
+You can do the following;Enter appropriate number
+
+1: Add an item
+2: Display total value
+3: Delete an item
+4: Display all items
+5: Quit
+
+What is your option? 1
+Enter item code: 111
+Enter item cost: 100
+
+You can do the following;Enter appropriate number
+
+1: Add an item
+2: Display total value
+3: Delete an item
+4: Display all items
+5: Quit
+
+What is your option? 1
+Enter item code: 222
+Enter item cost: 200
+
+You can do the following;Enter appropriate number
+
+1: Add an item
+2: Display total value
+3: Delete an item
+4: Display all items
+5: Quit
+
+What is your option? 1
+Enter item code: 333
+Enter item cost: 300
+
+You can do the following;Enter appropriate number
+
+1: Add an item
+2: Display total value
+3: Delete an item
+4: Display all items
+5: Quit
+
+What is your option? 2
+
+Total Value: 100
+
+Total Value: 300
+
+Total Value: 600
+
+You can do the following;Enter appropriate number
+
+1: Add an item
+2: Display total value
+3: Delete an item
+4: Display all items
+5: Quit
+
+What is your option? 3
+Enter item code: 222
+
+You can do the following;Enter appropriate number
+
+1: Add an item
+2: Display total value
+3: Delete an item
+4: Display all items
+5: Quit
+
+What is your option? 4
+
+Code Price
+
+111 100
+222 0
+333 300
+
+You can do the following;Enter appropriate number
+
+1: Add an item
+2: Display total value
+3: Delete an item
+4: Display all items
+5: Quit
+
+What is your option? 5
+
+*/
