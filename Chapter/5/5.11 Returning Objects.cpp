@@ -8,8 +8,8 @@ class matrix{
         void read(void){
             cout << "Enter the elements of the 3x3 matrix: \n";
             int i, j;
-            for (i = 0;i<3;i++){
-                for(j=0;j<3;j++){
+            for (i = 0; i < 3; i++){
+                for(j = 0; j < 3; j++){
                     cout <<"m[" << i << "][" << j << "] = ";
                     cin >> m[i][j];
                 }
@@ -17,9 +17,9 @@ class matrix{
         }
         void display(void){
             int i, j;
-            for(i=0;i<3;i++){
+            for(i = 0; i < 3; i++){
                 cout << "\n";
-                for(j=0;j<3;j++){
+                for(j = 0; j < 3; j++){
                     cout << m[i][j] <<"\t";
                 }
             }
@@ -30,8 +30,8 @@ class matrix{
 matrix trans(matrix m1){
     matrix m2;
     int i, j;
-    for(i = 0;i<3;i++){
-        for(j=0;j<3;j++){
+    for(i = 0; i < 3; i++){
+        for(j = 0; j < 3; j++){
             m2.m[i][j] = m1.m[i][j];
         }
     }
@@ -39,13 +39,14 @@ matrix trans(matrix m1){
 }
 
 int main(){
-    matrix m1, m2;
-    m1.read();
+    matrix m, n;
+    m.read();
     cout <<"\nYou entered the following matrix: ";
-    m1.display();
-    m2 = trans(m1);
+    m.display();
+    
+    n = trans(m);
     cout << "\n\nTransposed matrix: ";
-    m2.display();
+    n.display();
     return 0;
 }
 
