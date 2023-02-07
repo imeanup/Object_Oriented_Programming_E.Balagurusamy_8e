@@ -1,20 +1,18 @@
 #include<iostream>
 using namespace std;
 
-class age{
-    private:
-        int child_age;
+class personal{
     public:
-        age() : child_age(20) {}
-        friend int father_age(age); // Friend Function
+        int p();
 };
-int father_age(age d){
-    d.child_age += 15;
-    return d.child_age;
+int personal :: p(){
+    return 1;
 }
 
 int main(){
-    age D;
-    cout << father_age(D);
+    personal a;
+    // a.x = &personal :: p
+    // cout << ((a.*(a.x))());
+    cout << a.p()<< endl;
     return 0;
 }
