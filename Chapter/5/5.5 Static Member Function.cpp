@@ -35,3 +35,16 @@ int main(){
     t3.showcode();
     return 0;
 }
+/* 
+
+|--------------------------------------------------------------|
+| g++ Static\ Member\ Function.cpp -o Static\ Member\ Function |
+| ./Static\ Member\ Function                                   |
+|--------------------------------------------------------------|
+
+count: 2
+count: 3
+Object number:1
+Object number:2
+Object number:3
+*/

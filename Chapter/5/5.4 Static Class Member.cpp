@@ -35,3 +35,18 @@ int main(){
 
     return 0;
 }
+/*
+|--------------------------------------------------------|
+| g++ Static\ Class\ Member.cpp -o Static\ Class\ Member |
+| ./Static\ Class\ Member                                |
+|--------------------------------------------------------|
+
+count:0
+count:0
+count:0
+After reading data
+count:3
+count:3
+count:3
+
+*/
