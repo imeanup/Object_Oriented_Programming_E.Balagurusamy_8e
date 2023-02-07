@@ -48,3 +48,33 @@ int main(){
     m2.display();
     return 0;
 }
+
+
+/*
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+& g++ 5.11\ Returning\ Objects.cpp -o 5.11\ Returning\ Objects   &
+& ./5.11\ Returning\ Objects                                     &
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Enter the elements of the 3x3 matrix: 
+m[0][0] = 1
+m[0][1] = 2
+m[0][2] = 3
+m[1][0] = 4
+m[1][1] = 5
+m[1][2] = 6
+m[2][0] = 7
+m[2][1] = 8
+m[2][2] = 9
+
+You entered the following matrix: 
+1       2       3
+4       5       6
+7       8       9
+
+Transposed matrix: 
+1       2       3
+4       5       6
+7       8       9  
+
+*/
