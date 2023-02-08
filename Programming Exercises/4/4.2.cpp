@@ -5,15 +5,14 @@ using namespace std;
 
 void matrix(int m, int n)
 {
-    /*
     float **p;
     p = new float*[m];
     for (int i = 0; i < m; i++)
     {
         p[i] = new float[n];
     }
-    */
-    vector<vector<int> > p(m, vector<int>(n));
+    
+    // vector<vector<int> > p(m, vector<int>(n));
 
     cout << "Enter " << m << " by " << n << " matrix elements one by one" << endl;
     for (int i = 0; i < m; i++)
