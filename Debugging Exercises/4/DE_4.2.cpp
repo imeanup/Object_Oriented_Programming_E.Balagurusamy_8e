@@ -16,7 +16,7 @@ error: redefinition of 'show' with a different type: 'float' vs 'int'
     one with an int parameter and another with a float parameter. 
 
     >> Solution:
-    either use different function names for each declaration or 
+    Either use different function names for each declaration or 
     use function overloading to have multiple definitions of the same function 
     with different parameters.
 */
