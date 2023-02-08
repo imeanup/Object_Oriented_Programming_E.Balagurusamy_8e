@@ -9,13 +9,13 @@ void printArea(int a){
     cout << "The area of a square is " << a*a << endl;
 }
 
-void printArea(int r){
+void printArea(double r){
     cout << "The area of a circle is " << 3.14*r*r << endl;
 }
 
 int main(){
     printArea(10, 20);
     printArea(4);
-    // printArea(3);
+    printArea(3.0);
     return 0;
 }
