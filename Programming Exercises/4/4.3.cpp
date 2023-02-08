@@ -7,7 +7,7 @@ void matrix(int n, int m = 3)
 {
     vector<vector<int> > p(m, vector<int>(n));
 
-    cout << "Enter " << m << " x " << n << " matrix elements one by one" << endl;
+    cout << "Enter " << m << " x " << n << " = " << int(m*n) << " matrix elements one by one" << endl;
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
