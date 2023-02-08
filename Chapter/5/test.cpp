@@ -1,18 +1,42 @@
 #include<iostream>
 using namespace std;
+class B;
 
-class personal{
+class A{
+    int x;
     public:
-        int p();
+        void setdata(int d){
+            x = d;
+        }
+        void display(){
+            cout << x << endl;
+        }
+        friend void add(A&, B);
 };
-int personal :: p(){
-    return 1;
+
+class B{
+    int x;
+    public:
+        void setdata(int d){
+            x = d;
+        }
+        void display(){
+            cout << x << endl;
+        }
+        friend void add(A &, B);
+};
+
+void add(A & ob_A, B ob_B){
+    ob_A.x += ob_B.x;
 }
 
 int main(){
-    personal a;
-    // a.x = &personal :: p
-    // cout << ((a.*(a.x))());
-    cout << a.p()<< endl;
+    A a;
+    B b;
+    a.setdata(10);
+    b.setdata(10);
+    add(a, b);
+    a.display();
+    b.display();
     return 0;
 }
