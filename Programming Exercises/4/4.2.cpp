@@ -3,7 +3,7 @@
 #include<vector>
 using namespace std;
 // int const m = 3;
-void matrix(int m, int n = 3)
+void matrix(int n, int m = 3)
 {
     /*
     float **p;
@@ -15,7 +15,7 @@ void matrix(int m, int n = 3)
     */
     vector<vector<int> > p(m, vector<int>(n));
 
-    cout << "Enter " << n << " matrix elements one by one" << endl;
+    cout << "Enter " << m << "by" << n << " matrix elements one by one" << endl;
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
