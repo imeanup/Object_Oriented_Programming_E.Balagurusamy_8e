@@ -10,12 +10,20 @@ double power(double m, int n = 2){
 }
 
 int main(){
-    double x;
-    int y;
-    cout << "Enter a number: " << endl;
-    cin >> x;
-    cout << "Enter the power (default = 2): ";
-    cin >> y;
-    cout << "Result: " << power(x, y) << endl;
+    double m;
+    int n;
+    cout << "Enter a value for m: ";
+    cin >> m;
+    cout << "Enter a value for n (or press enter to use the default value of 2): ";
+    if (cin >> n)
+    {
+        cout << m << " raised to the power of " << n << " is " << power(m, n) << endl;
+    }
+    else
+    {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << m << " raised to the power of 2 is " << power(m) << endl;
+    }
     return 0;
 }
