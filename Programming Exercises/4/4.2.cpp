@@ -2,8 +2,8 @@
 #include <iomanip>
 #include<vector>
 using namespace std;
-int const m = 3;
-void matrix(int m, int n)
+// int const m = 3;
+void matrix(int m, int n = 3)
 {
     /*
     float **p;
@@ -37,8 +37,8 @@ void matrix(int m, int n)
 int main()
 {
     int r, c;
-    cout << "Enter column size of matrix: ";
-    cin >> r >> c;
+    cout << "Enter row size of matrix: ";
+    cin >> r;
     matrix(r, c);
     return 0;
 }
