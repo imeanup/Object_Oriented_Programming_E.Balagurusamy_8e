@@ -22,3 +22,8 @@ int main(){
     b.display();
     return 0;
 }
+
+/*
+10 20
+20 10
+*/
