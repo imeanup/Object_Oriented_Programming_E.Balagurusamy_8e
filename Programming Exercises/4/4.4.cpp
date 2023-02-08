@@ -5,9 +5,9 @@ void printArea(int x, int y){
     cout << "The area of a square is " << x*y << endl;
 }
 
-void printArea(double r){
-    cout << "The area of a circle is " << 3.14*r*r << endl;
-}
+// void printArea(double r){
+//     cout << "The area of a circle is " << 3.14*r*r << endl;
+// }
 
 void printArea(int x, int y = 20){
     cout << "The area of a rectangle is "<< x*y << endl;
