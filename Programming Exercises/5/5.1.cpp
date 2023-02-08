@@ -14,7 +14,6 @@ d) To display name and balance
 
 Write a main program to test the program.
 */
-
 #include<iostream>
 #include<string>
 
