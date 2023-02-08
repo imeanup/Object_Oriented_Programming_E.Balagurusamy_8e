@@ -76,16 +76,6 @@ Write a main program to test the program.
 by using data types name, acc_type,acc_no,balance
 */
 
-#ifdef _WIN32
-#include<iostream.h>
-#include<conio.h>
-#endif
-
-#ifdef linux
-#include<iostream>
-#include<curses.h>
-#endif
-
 #include<iostream>
 #include<stdlib.h>
 using namespace std;
