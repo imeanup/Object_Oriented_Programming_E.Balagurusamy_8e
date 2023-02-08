@@ -2,20 +2,12 @@
 #include <iomanip>
 #include<vector>
 using namespace std;
-
-void matrix(int m, int n)
+// int const m = 3;
+void matrix(int n, int m = 3)
 {
-    /*
-    float **p;
-    p = new float*[m];
-    for (int i = 0; i < m; i++)
-    {
-        p[i] = new float[n];
-    }
-    */
     vector<vector<int> > p(m, vector<int>(n));
 
-    cout << "Enter " << m << " by " << n << " matrix elements one by one" << endl;
+    cout << "Enter " << m << " x " << n << " matrix elements one by one" << endl;
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
@@ -36,9 +28,9 @@ void matrix(int m, int n)
 
 int main()
 {
-    int r, c;
-    cout << "Enter size of matrix: ";
-    cin >> r >> c;
-    matrix(r, c);
+    int c;
+    cout << "Enter column size of matrix: ";
+    cin >> c;
+    matrix(c);
     return 0;
 }
