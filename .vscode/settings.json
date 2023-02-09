@@ -2,6 +2,7 @@
     "gitdoc.enabled": true,
     "files.associations": {
         "COMMIT_EDITMSG": "bat",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ratio": "cpp"
     }
 }
