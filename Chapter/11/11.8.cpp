@@ -14,7 +14,9 @@ class INVENTORY{
             cout << "Cost: "; cin >> cost;
         }
         void putdata(void){
-            cout << setw(10) << name << setw(10) << code << setprecision(2) << setw(10) << cost << endl;
+            cout << setw(10) << name 
+                 << setw(10) << code 
+                 << setprecision(2) << setw(10) << cost << endl;
         }
 };
 
