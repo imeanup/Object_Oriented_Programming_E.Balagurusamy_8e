@@ -27,12 +27,10 @@ int main(int argc, char *argv[]){
     }
 
     for (int i = 0; i < 9; i++){
-        if (number[i] % 2 == 0){
-            fout2 << number[i] << " ";
-        }
-        else{
-            fout1 << number[i] << " ";
-        }
+        if (number[i] % 2 == 0)
+        fout2 << number[i] << " ";
+        else
+        fout1 << number[i] << " ";
     }
 
     fout2.close();
