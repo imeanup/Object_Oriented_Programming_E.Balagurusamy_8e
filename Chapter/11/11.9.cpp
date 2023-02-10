@@ -45,7 +45,7 @@ int main(int argc, char *argv[]){
             fin.get(ch);
             cout << ch;
         }
-        while (fin);
+        while(fin);
         cout << "\n\n";
         fin.close();
     }
