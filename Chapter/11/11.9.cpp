@@ -35,11 +35,11 @@ int main(int argc, char *argv[]){
 
     fout2.close();
     fout1.close();
-
     ifstream fin;
     char ch;
+
     for (int i = 1; i < argc; i++) {
-        fin.open(argv[1]);
+        fin.open(argv[i]);
         cout << "Contents of " << argv[i] << "\n";
         do {
             fin.get(ch);
@@ -51,3 +51,14 @@ int main(int argc, char *argv[]){
     }
     return 0;
 }
+
+/*
+g++ 11.9.cpp -o 11.9
+./11.9 ODD EVEN
+
+Contents of ODD
+11 33 55 77 99  
+
+Contents of EVEN
+22 44 66 88  
+*/
