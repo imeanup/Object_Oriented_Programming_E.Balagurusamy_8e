@@ -72,7 +72,7 @@ int main(){
 
     cout << "CONTENTS of UPDATED FILE\n";
 
-    while (inoutfile.read((char*)& item, sizeof item)){
+    while (inoutfile.read((char*)&item, sizeof item)){
         item.putdata();
     }
 
