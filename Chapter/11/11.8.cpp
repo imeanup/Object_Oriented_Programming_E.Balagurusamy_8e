@@ -23,8 +23,11 @@ class INVENTORY{
 int main(){
     INVENTORY item;
     fstream inoutfile;
+
     inoutfile.open("STOCK.DAT", ios::ate | ios::in | ios::out | ios::binary);
+    
     inoutfile.seekg(0, ios::beg);
+    
     cout << "CURRENT CONTENT OF STOCK" << "\n";
 
     while(inoutfile.read((char *) &item, sizeof item)){
