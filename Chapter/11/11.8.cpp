@@ -24,7 +24,7 @@ int main(){
     INVENTORY item;
     fstream inoutfile;
 
-    inoutfile.open("STOCK.DAT", ios::ate | ios::in | ios::out | ios::binary);
+    inoutfile.open("STOCK.txt", ios::ate | ios::in | ios::out | ios::binary);
     
     inoutfile.seekg(0, ios::beg);
 
@@ -42,7 +42,7 @@ int main(){
     inoutfile.write((char*) & item, sizeof item);
 
     inoutfile.seekg(0);
-    
+
     cout << "CONTENTS of APPENDED FILE\n";
 
     while(inoutfile.read((char*) & item, sizeof item)){
