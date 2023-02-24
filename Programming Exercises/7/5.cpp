@@ -1,11 +1,12 @@
 //TODO: Define two classes Polar and Rectangle to represent points in the polar and rectangle systems. 
 // Using conversion routines to convert from one system to the other.
 
-
 #include <iostream>
 #include <cmath>
 
 using namespace std;
+
+class Rectangle; // forward declaration
 
 class Polar {
 private:
@@ -19,11 +20,7 @@ public:
     void print() const {
         cout << "(" << r << ", " << theta << ")";
     }
-    Rectangle toRectangle() const {
-        double x = r * cos(theta);
-        double y = r * sin(theta);
-        return Rectangle(x, y);
-    }
+    Rectangle toRectangle() const;
 };
 
 class Rectangle {
@@ -44,6 +41,12 @@ public:
         return Polar(r, theta);
     }
 };
+
+Rectangle Polar::toRectangle() const {
+    double x = r * cos(theta);
+    double y = r * sin(theta);
+    return Rectangle(x, y);
+}
 
 int main() {
     Polar p(1, M_PI/4);
