@@ -69,6 +69,16 @@ public:
         return result;
     }
 
+    MAT operator-(const MAT& mat) const {
+        MAT result(m, n);
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                result.data[i][j] = data[i][j] - mat.data[i][j];
+            }
+        }
+        return result;
+    }
+
     MAT operator*(const MAT& mat) const {
         MAT result(m, mat.n);
         for (int i = 0; i < m; i++) {
@@ -95,6 +105,18 @@ public:
 };
 
 int main(){
-    MAT A(3, 4, 1);
-    cout << A << endl;
+    MAT A(2, 2, 1);
+    cout << "A: \n" << A << endl;
+
+    MAT B(2, 2, 2);
+    cout << "B: \n "<< endl;
+
+    MAT C = A + B;
+    cout << "+ \n" << C << endl;
+
+    MAT D = A - B;
+    cout << "- \n" << D << endl;
+
+    MAT E = A * B;
+    cout << "* \n" << E << endl;
 }
