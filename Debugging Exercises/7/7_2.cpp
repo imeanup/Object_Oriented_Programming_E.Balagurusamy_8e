@@ -1,30 +1,32 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
+
 class demo{
     int data;
     public:
-        demo(){}
         demo(int d){
             data = d;
         }
         void show(){
-            cout << data << endl;
+            cout << "\nValue = " << data << endl;
         }
-        void operator++(){
-            data++;
-        }
-        demo & operator = (demo &t){
-            t.data = data;
-            return t;
-        }
+        friend void operator-(demo);
 };
 
+void operator-(demo d){
+    d.data = -d.data;
+}
+
 int main(){
-    demo ob1(10), ob2;
-    ++ob1;
-    ob1 = ob2;
-    ob1.show();
-    ob2.show();
+    demo ob(10);
+    ob.show();
+    -ob;
+    ob.show();
     return 0;
 }
+
+/*
+Value = 10
+
+Value = 10
+*/
