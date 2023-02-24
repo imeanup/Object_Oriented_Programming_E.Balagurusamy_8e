@@ -44,17 +44,25 @@ bool Fraction::operator<=(const Fraction &f){
 
 int main(){
     Fraction f1(2,3), f2(4,6);
-    if(f1 == f2){
-        cout << "f1 is equal to f2" << endl;
-    }
-    if(f1 != f2){
-        cout << "f1 is not equal to f2" << endl;
-    }
-    if(f1 >= f2){
-        cout << "f1 is greater than or equal to f2" << endl;
-    }
-    if(f1 <= f2){
-        cout << "f1 is less than or equal to f2" << endl;
-    }
+    cout << "Comparing fractions:" << endl;
+    cout << "f1 = ";
+    f1.display();
+    cout << endl;
+    cout << "f2 = ";
+    f2.display();
+    cout << endl << endl;
+
+    bool isEqual = (f1 == f2);
+    cout << "f1 == f2: " << isEqual << endl;
+
+    isEqual = (f1 != f2);
+    cout << "f1 != f2: " << isEqual << endl;
+
+    bool isGreaterOrEqual = (f1 >= f2);
+    cout << "f1 >= f2: " << isGreaterOrEqual << endl;
+
+    bool isLessOrEqual = (f1 <= f2);
+    cout << "f1 <= f2: " << isLessOrEqual << endl;
+
     return 0;
 }
