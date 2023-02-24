@@ -17,7 +17,7 @@ enum WeekDays{
 };
 
 bool operator==(WeekDays w1, WeekDays w2){
-    return w1==w2;
+    return (w1==w2);
 }
 
 int main(){
@@ -28,3 +28,5 @@ int main(){
         cout << "Different Day\n";
         return 0;
 }
+
+// segmentation fault
