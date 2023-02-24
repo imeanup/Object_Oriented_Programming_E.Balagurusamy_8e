@@ -57,6 +57,17 @@ public:
         return result;
     }
 
+    // Transpose function
+    MAT transpose() {
+        MAT result(n, m);
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                result.data[j][i] = data[i][j];
+            }
+        }
+        return result;
+    }
+
     void print() {
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -84,6 +95,9 @@ int main() {
 
     cout << "\ne * f:\n";
     MAT g = e * f;
+    g.print();
+    
+    g.transpose();
     g.print();
 
     return 0;
