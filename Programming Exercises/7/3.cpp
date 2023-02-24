@@ -9,91 +9,92 @@ class MAT {
     vector<vector<double> > data;
 
 public:
+    // Default constructor
     MAT(){
         m = 0;
         n = 0;
     }
+    // Parameterized constructor
     MAT(int rows, int cols, double init = 0) {
         m = rows;
         n = cols;
-        
+        data.resize(rows);
+        for(int i=0; i<rows; i++){
+            data[i].resize(cols, init);
+        }
+    }
+    // Copy constructor
+    MAT(const MAT& mat) : m(mat.m), n(mat.n), data(mat.data) {}
+
+    // Destructor
+    ~MAT(){}
+    
+    // Assignment operator
+    MAT& operator=(const MAT& mat) {
+        if (this != &mat) {
+            m = mat.m;
+            n = mat.n;
+            data = mat.data;
+        }
+        return *this;
     }
 
-    MAT operator+(MAT other) {
-        if (m != other.m || n != other.n) {
-            cerr << "Error: Matrices have different dimensions\n";
-            return MAT();
-        }
+    // Getter functions
+    int getRows() const {
+        return m;
+    }
 
+    int getCols() const {
+        return n;
+    }
+
+    // Matrix operations
+    MAT transpose() const {
+        MAT transposed(n, m);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                transposed.data[i][j] = data[j][i];
+            }
+        }
+        return transposed;
+    }
+
+    MAT operator+(const MAT& mat) const {
         MAT result(m, n);
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                result.data[i][j] = data[i][j] + other.data[i][j];
+                result.data[i][j] = data[i][j] + mat.data[i][j];
             }
         }
         return result;
     }
 
-    MAT operator-(MAT other) {
-        if (m != other.m || n != other.n) {
-            cerr << "Error: Matrices have different dimensions\n";
-            return MAT();
-        }
-
-        MAT result(m, n);
+    MAT operator*(const MAT& mat) const {
+        MAT result(m, mat.n);
         for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                result.data[i][j] = data[i][j] - other.data[i][j];
-            }
-        }
-        return result;
-    }
-
-    MAT operator*(MAT other) {
-        if (n != other.m) {
-            cerr << "Error: Matrices cannot be multiplied\n";
-            return MAT();
-        }
-
-        MAT result(m, other.n);
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < other.n; j++) {
+            for (int j = 0; j < mat.n; j++) {
+                double sum = 0;
                 for (int k = 0; k < n; k++) {
-                    result.data[i][j] += data[i][k] * other.data[k][j];
+                    sum += data[i][k] * mat.data[k][j];
                 }
+                result.data[i][j] = sum;
             }
         }
         return result;
     }
-
-    void print() {
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                cout << data[i][j] << " ";
+    // Output stream operator
+    friend ostream& operator<<(ostream& os, const MAT& mat) {
+        for (int i = 0; i < mat.m; i++) {
+            for (int j = 0; j < mat.n; j++) {
+                os << mat.data[i][j] << " ";
             }
-            cout << endl;
+            os << endl;
         }
+        return os;
     }
 };
 
-int main() {
-    MAT a(2, 2, 1);
-    MAT b(2, 2, 2);
-
-    cout << "a + b:\n";
-    MAT c = a + b;
-    c.print();
-
-    cout << "a - b:\n";
-    MAT d = a - b;
-    d.print();
-
-    MAT e(2, 3, 1);
-    MAT f(3, 2, 2);
-
-    cout << "e * f:\n";
-    MAT g = e * f;
-    g.print();
-
-    return 0;
+int main(){
+    MAT A(3, 4, 1);
+    cout << A << endl;
 }
