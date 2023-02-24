@@ -38,7 +38,7 @@ public:
 };
 
 int main() {
-    Polar p1(3, 45), p2(4, 30);
+    Polar p1(10, 45), p2(8, 45);
     Polar p3 = p1 + p2;
 
     cout << "Polar coordinates of p1: (" << p1.getRadius() << ", " << p1.getAngle() << ")" << endl;
