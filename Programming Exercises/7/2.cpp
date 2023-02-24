@@ -9,7 +9,7 @@ public:
     Polar(double radius = 0, double angle = 0) : r(radius), a(angle) {}
 
     // Overload + operator to add two Polar objects
-    Polar operator+(const Polar& other) const {
+    Polar operator+(Polar other){
         double x1 = r * cos(a);
         double y1 = r * sin(a);
         double x2 = other.r * cos(other.a);
@@ -22,11 +22,11 @@ public:
     }
 
     // Getters for radius and angle
-    double getRadius() const {
+    double getRadius() {
         return r;
     }
 
-    double getAngle() const {
+    double getAngle() {
         return a;
     }
 
@@ -38,7 +38,7 @@ public:
 };
 
 int main() {
-    Polar p1(10, 45), p2(8, 45);
+    Polar p1(3, 45), p2(4, 30);
     Polar p3 = p1 + p2;
 
     cout << "Polar coordinates of p1: (" << p1.getRadius() << ", " << p1.getAngle() << ")" << endl;
