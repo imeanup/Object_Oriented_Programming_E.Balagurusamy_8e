@@ -17,7 +17,20 @@ enum WeekDays{
 };
 
 bool operator==(WeekDays w1, WeekDays w2){
-    return (w1==w2);
+    if (w1== mSunday && w2 == mSunday)
+        return 1;
+    else if (w1== mSunday && w2 == mSunday)
+        return 1;
+    else if (w1== mSunday && w2 == mSunday)
+        return 1;
+    else if (w1== mSunday && w2 == mSunday)
+        return 1;
+    else if (w1== mSunday && w2 == mSunday)
+        return 1;
+    else if (w1== mSunday && w2 == mSunday)
+        return 1;
+    else
+        return 0;
 }
 
 int main(){
