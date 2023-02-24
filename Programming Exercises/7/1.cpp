@@ -24,7 +24,7 @@ FLOAT FLOAT :: operator-(FLOAT other){
 }
 
 FLOAT FLOAT :: operator*(FLOAT other){
-    return FLOAT(data + other.data);
+    return FLOAT(data * other.data);
 }
 
 FLOAT FLOAT :: operator/(FLOAT other){
@@ -36,15 +36,16 @@ FLOAT FLOAT :: operator/(FLOAT other){
 }
 
 int main(){
-    FLOAT a(2.5), b(1.5), c;
-    c = a + b;
+    FLOAT a(2.5), b(1.5);
+    FLOAT c = a + b;
+    FLOAT d = a - b;
+    FLOAT e = a * b;   
+    FLOAT f = a / b;
+
     c.display();
-    c = a - b;
-    c.display();
-    c = a * b;
-    c.display();
-    c = a / b;
-    c.display();
+    d.display();
+    e.display();
+    f.display();
     return 0;
 }
 
