@@ -8,6 +8,7 @@ class Space{
         Space(){
             mCount = 0;
         }
+        // Overload the pre-increment operator
         Space operator++(){
             mCount++;
             return *this;
@@ -16,6 +17,6 @@ class Space{
 
 int main(){
     Space objSpace;
-    ++objSpace;
+    ++objSpace; // Use the pre-increment operator
     return 0;
 }
