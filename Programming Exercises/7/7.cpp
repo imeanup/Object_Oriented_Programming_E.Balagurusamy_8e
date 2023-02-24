@@ -50,7 +50,7 @@ int main(){
     cout << endl;
     cout << "f2 = ";
     f2.display();
-    cout << endl << endl;
+    cout << endl;
 
     bool isEqual = (f1 == f2);
     cout << "f1 == f2: " << isEqual << endl;
