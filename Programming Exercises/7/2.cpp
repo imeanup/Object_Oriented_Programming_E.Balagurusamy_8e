@@ -11,10 +11,10 @@ public:
 
     // Overload + operator to add two Polar objects
     Polar operator+(Polar other){
-        double x1 = r * cos(a);
-        double y1 = r * sin(a);
-        double x2 = other.r * cos(other.a);
-        double y2 = other.r * sin(other.a);
+        double x1 = r * cos(a * M_PI / 180);
+        double y1 = r * sin(a * M_PI / 180);
+        double x2 = other.r * cos(other.a * M_PI / 180);
+        double y2 = other.r * sin(other.a * M_PI / 180);
         double x = x1 + x2;
         double y = y1 + y2;
         double radius = sqrt(x * x + y * y);
