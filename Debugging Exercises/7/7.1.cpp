@@ -11,7 +11,7 @@ class Space{
         // Overload the pre-increment operator
         Space operator++(){
             mCount++;
-            return *this;
+            return Space();
         }
 };
 
