@@ -18,7 +18,7 @@ public:
         double x = x1 + x2;
         double y = y1 + y2;
         double radius = sqrt(x * x + y * y);
-        double angle = atan2(y, x) * (180/M_PI);
+        double angle = atan2(y, x) * 180 / M_PI;
         return Polar(radius, angle);
     }
 
