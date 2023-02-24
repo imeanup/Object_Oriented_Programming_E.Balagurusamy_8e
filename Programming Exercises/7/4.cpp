@@ -4,7 +4,7 @@ using namespace std;
 
 class String{
     char *p;
-
+    // TODO: Using strlen was perform in the 
     public:
         String(){p = 0;}
         String(const char *s);
