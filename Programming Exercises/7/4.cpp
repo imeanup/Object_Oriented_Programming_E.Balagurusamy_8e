@@ -53,7 +53,7 @@ int main(){
         cout << "s1 and s4 are equal" << endl;
     }
     else{
-        cout << "Not equal " << endl;
+        cout << "s1 and s4 are not equal " << endl;
     }
 
     return 0;
