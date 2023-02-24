@@ -17,6 +17,10 @@ class Space{
 
 int main(){
     Space objSpace;
+    /*
+    // Post-increment operator-creates a temporary object
+    objSpace++;
+    */
     ++objSpace; // Use the pre-increment operator
     return 0;
 }
