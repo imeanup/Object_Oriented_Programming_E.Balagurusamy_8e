@@ -11,7 +11,7 @@ class FLOAT{
         FLOAT operator*(FLOAT other);
         FLOAT operator/(FLOAT other);
         void display(){
-            cout << "\nValue = " << data << endl;
+            cout << "Value = " << data << endl;
         }
 };
 
