@@ -8,54 +8,54 @@ using namespace std;
 class Complex {
 private:
     double real;
-    double imaginary;
+    double imag;
 
 public:
-    Complex() : real(0), imaginary(0) {}
-    Complex(double r, double i) : real(r), imaginary(i) {}
+    Complex() : real(0), imag(0) {}
+    Complex(double r, double i) : real(r), imag(i) {}
 
     Complex operator+ (Complex const &obj) {
         Complex res;
         res.real = real + obj.real;
-        res.imaginary = imaginary + obj.imaginary;
+        res.imag = imag + obj.imag;
         return res;
     }
 
     Complex operator- (Complex const &obj) {
         Complex res;
         res.real = real - obj.real;
-        res.imaginary = imaginary - obj.imaginary;
+        res.imag = imag - obj.imag;
         return res;
     }
 
     Complex operator* (Complex const &obj) {
         Complex res;
-        res.real = real * obj.real - imaginary * obj.imaginary;
-        res.imaginary = real * obj.imaginary + imaginary * obj.real;
+        res.real = real * obj.real - imag * obj.imag;
+        res.imag = real * obj.imag + imag * obj.real;
         return res;
     }
 
     Complex operator/ (Complex const &obj) {
         Complex res;
-        double denominator = obj.real * obj.real + obj.imaginary * obj.imaginary;
-        res.real = (real * obj.real + imaginary * obj.imaginary) / denominator;
-        res.imaginary = (imaginary * obj.real - real * obj.imaginary) / denominator;
+        double denominator = obj.real * obj.real + obj.imag * obj.imag;
+        res.real = (real * obj.real + imag * obj.imag) / denominator;
+        res.imag = (imag * obj.real - real * obj.imag) / denominator;
         return res;
     }
 
     Complex operator- () {
         Complex res;
         res.real = -real;
-        res.imaginary = -imaginary;
+        res.imag = -imag;
         return res;
     }
 
     bool operator== (Complex const &obj) {
-        return (real == obj.real && imaginary == obj.imaginary);
+        return (real == obj.real && imag == obj.imag);
     }
 
     void display() {
-        cout << "(" << real << ", " << imaginary << "i)" << endl;
+        cout << "(" << real << ", " << imag << "i)" << endl;
     }
 };
 
