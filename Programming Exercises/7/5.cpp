@@ -6,24 +6,6 @@
 
 using namespace std;
 
-class Polar {
-private:
-    double r, theta;
-public:
-    Polar(double r, double theta) : r(r), theta(theta) {}
-    double getR() const { return r; }
-    double getTheta() const { return theta; }
-    void setR(double r) { this->r = r; }
-    void setTheta(double theta) { this->theta = theta; }
-    void print() const {
-        cout << "(" << r << ", " << theta << ")";
-    }
-    Rectangle toRectangle() const {
-        double x = r * cos(theta);
-        double y = r * sin(theta);
-        return Rectangle(x, y);
-    }
-};
 
 class Rectangle {
 private:
@@ -41,6 +23,25 @@ public:
         double r = sqrt(x*x + y*y);
         double theta = atan2(y, x);
         return Polar(r, theta);
+    }
+};
+
+class Polar {
+private:
+    double r, theta;
+public:
+    Polar(double r, double theta) : r(r), theta(theta) {}
+    double getR() const { return r; }
+    double getTheta() const { return theta; }
+    void setR(double r) { this->r = r; }
+    void setTheta(double theta) { this->theta = theta; }
+    void print() const {
+        cout << "(" << r << ", " << theta << ")";
+    }
+    Rectangle toRectangle() const {
+        double x = r * cos(theta);
+        double y = r * sin(theta);
+        return Rectangle(x, y);
     }
 };
 
