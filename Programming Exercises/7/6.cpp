@@ -37,9 +37,9 @@ public:
 
     Complex operator/ (Complex const &obj) {
         Complex res;
-        double denominator = obj.real * obj.real + obj.imag * obj.imag;
-        res.real = (real * obj.real + imag * obj.imag) / denominator;
-        res.imag = (imag * obj.real - real * obj.imag) / denominator;
+        double deno = obj.real * obj.real + obj.imag * obj.imag;
+        res.real = (real * obj.real + imag * obj.imag) / deno;
+        res.imag = (imag * obj.real - real * obj.imag) / deno;
         return res;
     }
 
