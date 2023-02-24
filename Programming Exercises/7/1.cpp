@@ -36,7 +36,7 @@ FLOAT FLOAT :: operator/(FLOAT other){
 }
 
 int main(){
-    FLOAT a(3.2), b(1.1), c;
+    FLOAT a(2.5), b(1.5), c;
     c = a + b;
     c.display();
     c = a - b;
