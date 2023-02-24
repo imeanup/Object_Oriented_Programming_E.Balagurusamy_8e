@@ -1,10 +1,11 @@
 #include <iostream>
-#include <string>
+#include <string> // strcmp
 using namespace std;
 
 class String{
     char *p;
-    // TODO: Using strlen was perform in the 
+    // TODO: Compare using strlen.
+    // Using strlen (or length compare) was perform in the Program 7.4 in the example. 
     public:
         String(){p = 0;}
         String(const char *s);
