@@ -10,15 +10,15 @@ class Rectangle; // forward declaration
 
 class Polar {
 private:
-    double r, theta;
+    double r, a;
 public:
-    Polar(double r, double theta) : r(r), theta(theta) {}
+    Polar(double r, double a) : r(r), a(a) {}
     double getR() const { return r; }
-    double getTheta() const { return theta; }
+    double getTheta() const { return a; }
     void setR(double r) { this->r = r; }
-    void setTheta(double theta) { this->theta = theta; }
+    void setTheta(double a) { this->a = a; }
     void print() const {
-        cout << "(" << r << ", " << theta << ")";
+        cout << "(" << r << ", " << a << ")";
     }
     Rectangle toRectangle() const;
 };
@@ -43,8 +43,8 @@ public:
 };
 
 Rectangle Polar::toRectangle() const {
-    double x = r * cos(theta);
-    double y = r * sin(theta);
+    double x = r * cos(a);
+    double y = r * sin(a);
     return Rectangle(x, y);
 }
 
