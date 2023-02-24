@@ -11,6 +11,7 @@ private:
     double imag;
 
 public:
+// TODO: Modify the Public class as in Program 7.2
     Complex() : real(0), imag(0) {}
     Complex(double r, double i) : real(r), imag(i) {}
 
