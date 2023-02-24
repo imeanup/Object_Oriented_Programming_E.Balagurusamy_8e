@@ -19,8 +19,8 @@ public:
         double y = y1 + y2;
         double radius = sqrt(x * x + y * y);
         double angle = atan2(y, x) * 180 / M_PI;
-        if (angle < 0) {
-            angle += 360; // convert negative angles to positive
+        if (angle < 0){
+            angle += 360;
         }
         return Polar(radius, angle);
     }
@@ -45,9 +45,9 @@ int main() {
     Polar p1(3, 45), p2(4, 30);
     Polar p3 = p1 + p2;
 
-    cout << "Polar coordinates of p1: (" << p1.getRadius() << ", " << p1.getAngle() << "°)" << endl;
-    cout << "Polar coordinates of p2: (" << p2.getRadius() << ", " << p2.getAngle() << "°)" << endl;
-    cout << "Polar coordinates of p3: (" << p3.getRadius() << ", " << p3.getAngle() << "°)" << endl;
+    cout << "Polar coordinates of p1: (" << p1.getRadius() << ", " << p1.getAngle() << ")" << endl;
+    cout << "Polar coordinates of p2: (" << p2.getRadius() << ", " << p2.getAngle() << ")" << endl;
+    cout << "Polar coordinates of p3: (" << p3.getRadius() << ", " << p3.getAngle() << ")" << endl;
 
     return 0;
 }
