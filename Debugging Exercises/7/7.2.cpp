@@ -18,7 +18,7 @@ bool operator==(WeekDays w1, WeekDays w2){
 
 int main(){
     WeekDays w1 = mSunday, w2 = mSunday;
-    if (w1==w2)
+    if (w1 == w2)
         cout << "Same Day\n";
     else
         cout << "Different Day\n";
