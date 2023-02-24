@@ -9,7 +9,15 @@ class MAT {
     vector<vector<double> > data;
 
 public:
-    MAT(int rows = 0, int cols = 0, double init = 0) : m(rows), n(cols), data(rows, vector<double>(cols, init)) {}
+    MAT(){
+        m = 0;
+        n = 0;
+    }
+    MAT(int rows, int cols, double init = 0) {
+        m = rows;
+        n = cols;
+        
+    }
 
     MAT operator+(MAT other) {
         if (m != other.m || n != other.n) {
