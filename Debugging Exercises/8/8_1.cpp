@@ -12,10 +12,10 @@ class faculty{
             cout << "Enter Name:- \t";
             cin >> name;
         }
-        void get_fid(void){
+        int get_fid(void){
             return fid;
         }
-        void get_name(void){
+        char get_name(void){
             return name;
         }
 };
