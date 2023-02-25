@@ -34,7 +34,7 @@ class D: public B, public C{
             value_c();
             value_d();
             e = a * b * c * d;
-            cout << "\nMultiplication is : " << c << endl;
+            cout << "\nMultiplication is : " << e << endl;
         }
 };
 
@@ -43,3 +43,7 @@ int main(){
     d1.result();
     return 0;
 }
+
+/*
+Multiplication is : 24
+*/
