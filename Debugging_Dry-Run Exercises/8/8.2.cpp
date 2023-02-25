@@ -16,7 +16,9 @@ class D: public B{
 
 int main(){
     B b;
+    // printf("\n");
     D d1;
+    // printf("\n");
     D d2(1);
 }
 
