@@ -1,115 +1,110 @@
-#include <iostream>
-#include <string>
-#include <cmath>
-
+#include<iostream>
+#include<string>
 using namespace std;
 
 class account {
 protected:
-    string name;
-    int account_number;
-    string account_type;
-    double balance;
-
+    string customerName;
+    int accountNumber;
+    char accountType;
+    float balance;
 public:
-    void set_name(string name) {
-        this->name = name;
+    void getAccountInfo() {
+        cout << "Enter customer name: ";
+        getline(cin, customerName);
+        cout << "Enter account number: ";
+        cin >> accountNumber;
+        cout << "Enter account type - Savings (S) or Current (C): ";
+        cin >> accountType;
+        accountType = toupper(accountType);
+        cout << "Enter initial balance: ";
+        cin >> balance;
     }
-
-    void set_account_number(int account_number) {
-        this->account_number = account_number;
-    }
-
-    void set_account_type(string account_type) {
-        this->account_type = account_type;
-    }
-
-    void display_balance() {
-        cout << "Account balance: $" << balance << endl;
-    }
-
-    virtual void deposit(double amount) {
-        balance += amount;
-    }
-
-    virtual void withdraw(double amount) {
-        balance -= amount;
-    }
-
-    virtual void compute_interest() {
-        // No interest for generic account
-    }
-
-    virtual void check_minimum_balance() {
-        // No minimum balance for generic account
-    }
-};
-
-class cur_acct : public account {
-private:
-    double min_balance = 1000;
-    double service_charge = 50;
-
-public:
-    void withdraw(double amount) {
-        if (balance - amount < min_balance) {
-            cout << "Insufficient funds in account!" << endl;
-            cout << "Service charge of $" << service_charge << " has been applied." << endl;
-            balance -= service_charge;
-        }
-        else {
-            balance -= amount;
-        }
-    }
-
-    void check_minimum_balance() {
-        if (balance < min_balance) {
-            cout << "Your balance has fallen below the minimum balance of $" << min_balance << endl;
-            cout << "Service charge of $" << service_charge << " has been applied." << endl;
-            balance -= service_charge;
-        }
+    void displayBalance() {
+        cout << "Current balance: " << balance << endl;
     }
 };
 
 class sav_acct : public account {
-private:
-    double interest_rate = 0.05;
-
+    float interestRate;
 public:
-    void deposit(double amount) {
-        balance += amount;
-        compute_interest();
+    void getInterestRate() {
+        cout << "Enter interest rate: ";
+        cin >> interestRate;
     }
+    void addInterest() {
+        float interest = balance * interestRate / 100;
+        balance += interest;
+        cout << "Interest added. Current balance: " << balance << endl;
+    }
+    void withdraw(float amount) {
+        if (balance >= amount) {
+            balance -= amount;
+            cout << "Amount withdrawn: " << amount << endl;
+            cout << "Current balance: " << balance << endl;
+        }
+        else {
+            cout << "Insufficient balance." << endl;
+        }
+    }
+};
 
-    void compute_interest() {
-        balance += balance * interest_rate;
+class cur_acct : public account {
+    float minBalance;
+    float serviceCharge;
+public:
+    void getMinBalance() {
+        cout << "Enter minimum balance: ";
+        cin >> minBalance;
+    }
+    void getServiceCharge() {
+        cout << "Enter service charge: ";
+        cin >> serviceCharge;
+    }
+    void checkMinBalance() {
+        if (balance < minBalance) {
+            balance -= serviceCharge;
+            cout << "Service charge imposed. Current balance: " << balance << endl;
+        }
+    }
+    void withdraw(float amount) {
+        if (balance >= amount) {
+            balance -= amount;
+            cout << "Amount withdrawn: " << amount << endl;
+            cout << "Current balance: " << balance << endl;
+            checkMinBalance();
+        }
+        else {
+            cout << "Insufficient balance." << endl;
+        }
     }
 };
 
 int main() {
-    // Create a savings account
+    int choice;
     sav_acct savings;
-    savings.set_name("John Doe");
-    savings.set_account_number(123456789);
-    savings.set_account_type("Savings");
-    savings.display_balance();
-    savings.deposit(1000);
-    savings.display_balance();
-    savings.withdraw(500);
-    savings.display_balance();
-    savings.check_minimum_balance();
-
-    // Create a current account
     cur_acct current;
-    current.set_name("Jane Doe");
-    current.set_account_number(987654321);
-    current.set_account_type("Current");
-    current.display_balance();
-    current.deposit(5000);
-    current.display_balance();
-    current.withdraw(6000);
-    current.display_balance();
-    current.check_minimum_balance();
-
+    cout << "Select account type - Savings (1) or Current (2): ";
+    cin >> choice;
+    cin.ignore();
+    if (choice == 1) {
+        savings.getAccountInfo();
+        savings.getInterestRate();
+        cout << endl;
+        savings.displayBalance();
+        savings.addInterest();
+        savings.withdraw(1000);
+    }
+    else if (choice == 2) {
+        current.getAccountInfo();
+        current.getMinBalance();
+        current.getServiceCharge();
+        cout << endl;
+        current.displayBalance();
+        current.withdraw(2000);
+    }
+    else {
+        cout << "Invalid choice." << endl;
+    }
     return 0;
 }
