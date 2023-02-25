@@ -12,12 +12,12 @@ class faculty{
             cout << "Enter Name:- \t";
             cin >> name;
         }
-        int get_fid(void){
-            return fid;
-        }
-        char get_name(void){
-            return name;
-        }
+        // int get_fid(){
+        //     return fid;
+        // }
+        // char get_name(){
+        //     cout << name << endl;
+        // }
 };
 
 class details : faculty{
@@ -31,8 +31,8 @@ class details : faculty{
             cin>>exp;
         }
         void display(){
-            cout << "\n\n" << "faculty id\t"<<get_fid()<<endl;
-            cout<<"Name of faculty\t"<<get_name()<<endl;
+            cout << "\n\n" << "faculty id\t"<<fid<<endl;
+            cout<<"Name of faculty\t"<<name<<endl;
             cout << "Faculty age\t" << age<<endl;
             cout << "Faculty years of experience\t"<<exp<<endl;
         }
