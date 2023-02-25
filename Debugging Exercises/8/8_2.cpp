@@ -15,7 +15,7 @@ public:
     }
 };
 
-class Car: public four_seater, public four_wheeler{};
+class Car: virtual public four_seater, public virtual four_wheeler{};
 
 int main(){
     Car c1;
