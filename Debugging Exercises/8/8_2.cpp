@@ -15,11 +15,11 @@ public:
     }
 };
 
-class Car: virtual public four_seater, public virtual four_wheeler{};
+class Car: public four_seater, public four_wheeler{};
 
 int main(){
     Car c1;
-    c1.four_seater();
-    c1.four_wheeler();
+    c1.four_seater::Property(); // Pg 217
+    c1.four_wheeler:: Property();
     return 0;
 }
