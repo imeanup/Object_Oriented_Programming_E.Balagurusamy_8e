@@ -22,7 +22,7 @@ class cube{
 
 int main()
 {
-    cube A1(4,3), B1, A2(4,4); // cube will take either no argument or 2.
+    cube A1(4, 5), B1, A2(4,4); // cube will take either no argument or 2.
     int temp;
     cout << "Default Area " << endl;
     temp = A1.area_of_cube();
@@ -37,5 +37,10 @@ int main()
 }
 
 /*
-
+Default Area 
+20
+Default volume: 
+125
+Area when argument is 4
+16
 */
