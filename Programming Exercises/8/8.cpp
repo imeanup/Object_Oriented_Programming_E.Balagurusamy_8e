@@ -103,9 +103,28 @@ class Clothing{
         string material;
 };
 
-class Milk : public Food{
+class MilkProduct : public Food {
     private:
         string brand;
         float fatContent;
-        // string storageInstruction;
+    public:
+        MilkProduct(const string& brand, float fat, const string& expiry,
+                    const string& info, const string& inst)
+            : Food(expiry, info, inst), brand(brand), fatContent(fat) {}
+
+        const string& getBrand() const {
+            return brand;
+        }
+        
+        void setBrand(const string& brand) {
+            this->brand = brand;
+        }
+
+        float getFatContent() const {
+            return fatContent;
+        }
+        
+        void setFatContent(float fat) {
+            fatContent = fat;
+        }
 };
