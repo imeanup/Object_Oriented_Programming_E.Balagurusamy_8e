@@ -30,7 +30,7 @@ class Education: public Staff{
             education = edu;
             professional = prof;
         }
-        void display(){
+        void displayEducation(){
             cout << "Educational Qualification(Highest): " << education << endl;
             cout << "Professional Qualification(Highest): " << professional << endl;
         }
@@ -49,7 +49,7 @@ class Teacher : public Education {
         }
         void display() {
             Staff::display();
-            Education::display();
+            displayEducation();
             cout << "Subject: " << subject << endl;
             cout << "Publication: " << publication << endl;
         }
@@ -63,12 +63,36 @@ class Officer : public Education{
         }
         void display() {
             Staff :: display();
-            Education :: display ();
+            displayEducation();
             cout << "Grade: " << grade << endl;
         }
 };
 // TODO: main
 
 int main(){
-    
+    // Create objects and set member variables
+     // Create objects and set member variables
+    Teacher t;
+    t.setCode(1001);
+    t.setName("John Doe");
+    t.setSubject("Mathematics");
+    t.setPublication("Linear Algebra");
+    t.setEduPro("Master's degree", "PhD in Mathematics");
+
+    Officer o;
+    o.setCode(2001);
+    o.setName("Jane Smith");
+    o.setGrade('A');
+    o.setEduPro("Bachelor's degree", "MBA");
+
+    // Display information
+    cout << "Teacher Information: " << endl;
+    t.display();
+    cout << endl;
+
+    cout << "Officer Information: " << endl;
+    o.display();
+    cout << endl;
+
+    return 0;
 }
