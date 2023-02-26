@@ -26,58 +26,60 @@ class account {
 };
 
 class sav_acct : public account {
-    float interestRate;
-public:
-    void getInterestRate() {
-        cout << "Enter interest rate: ";
-        cin >> interestRate;
-    }
-    void addInterest() {
-        float interest = balance * interestRate / 100;
-        balance += interest;
-        cout << "Interest added. Current balance: " << balance << endl;
-    }
-    void withdraw(float amount) {
-        if (balance >= amount) {
-            balance -= amount;
-            cout << "Amount withdrawn: " << amount << endl;
-            cout << "Current balance: " << balance << endl;
+    private:
+        float interestRate;
+    public:
+        void getInterestRate() {
+            cout << "Enter interest rate: ";
+            cin >> interestRate;
         }
-        else {
-            cout << "Insufficient balance." << endl;
+        void addInterest() {
+            float interest = balance * interestRate / 100;
+            balance += interest;
+            cout << "Interest added. Current balance: " << balance << endl;
         }
-    }
+        void withdraw(float amount) {
+            if (balance >= amount) {
+                balance -= amount;
+                cout << "Amount withdrawn: " << amount << endl;
+                cout << "Current balance: " << balance << endl;
+            }
+            else {
+                cout << "Insufficient balance." << endl;
+            }
+        }
 };
 
 class cur_acct : public account {
-    float minBalance;
-    float serviceCharge;
-public:
-    void getMinBalance() {
-        cout << "Enter minimum balance: ";
-        cin >> minBalance;
-    }
-    void getServiceCharge() {
-        cout << "Enter service charge: ";
-        cin >> serviceCharge;
-    }
-    void checkMinBalance() {
-        if (balance < minBalance) {
-            balance -= serviceCharge;
-            cout << "Service charge imposed. Current balance: " << balance << endl;
+    private:
+        float minBalance;
+        float serviceCharge;
+    public:
+        void getMinBalance() {
+            cout << "Enter minimum balance: ";
+            cin >> minBalance;
         }
-    }
-    void withdraw(float amount) {
-        if (balance >= amount) {
-            balance -= amount;
-            cout << "Amount withdrawn: " << amount << endl;
-            cout << "Current balance: " << balance << endl;
-            checkMinBalance();
+        void getServiceCharge() {
+            cout << "Enter service charge: ";
+            cin >> serviceCharge;
         }
-        else {
-            cout << "Insufficient balance." << endl;
+        void checkMinBalance() {
+            if (balance < minBalance) {
+                balance -= serviceCharge;
+                cout << "Service charge imposed. Current balance: " << balance << endl;
+            }
         }
-    }
+        void withdraw(float amount) {
+            if (balance >= amount) {
+                balance -= amount;
+                cout << "Amount withdrawn: " << amount << endl;
+                cout << "Current balance: " << balance << endl;
+                checkMinBalance();
+            }
+            else {
+                cout << "Insufficient balance." << endl;
+            }
+        }
 };
 
 int main() {
