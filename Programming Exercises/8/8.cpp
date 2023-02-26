@@ -19,64 +19,83 @@ class Product {
 
     public:
         Product(int id, string name, double price, int quantity) : name(name), id(id), price(price), quantity(quantity) {}
-        ~Product() {}
+        virtual ~Product() {}
         virtual string getCategory() const = 0;
-        string getName() const { 
-            return name; 
-            }
+        
         int getId() const {
             return id;
-            }
+        }
+
+        string getName() const { 
+            return name; 
+        }
+        
         int getQuantity() const { 
             return quantity; 
-            }
-        void setPrice(double price) { 
-            this->price = price; 
-            }
+        }
+
         void setQuantity(int quantity) { 
             this->quantity = quantity; 
-            }
+        }
+
+        void setPrice(double price) { 
+            this->price = price; 
+        }
+        
 };
 
 // ElectronicsAppliances: This class is derived from the Product class and contains additional attributes specific 
 // to electronics appliances, such as the manufacturer name, power consumption, and warranty period.
-class Electronics {
+class Electronics : public Product {
     private:
         string manufacturer;
         float powerConsumption;
         int warrantyPeriod;
     public:
-        Electronics(string &manu, float power, int warranty)
-            : manufacturer(manu), powerConsumption(power), warrantyPeriod(warranty) {}
+        Electronics(int id, const string &name, double price, int quantity, string &manu, float power, int warranty)
+            : Product(id, name, price, quantity), manufacturer(manu), powerConsumption(power), warrantyPeriod(warranty) {}
+        
+        string getCategory() const override {
+            return "Electronics Appliances";
+        }
+
         const string &getManufacturer() const {
             return manufacturer;
         }
-        void setManufacturer(const string &manu){
-            manufacturer = manu;
+
+        void setManufacturer(const string& manufacturer) {
+            this->manufacturer = manufacturer;
         }
+
         float getPowerConsumption() const{
             return powerConsumption;
         }
-        void setPowerConsumption(float power) {
-            powerConsumption = power;
+
+        void setPowerConsumption(float powerConsumption) {
+            this->powerConsumption = powerConsumption;
         }
+
         int getWarrantyPeriod() const {
             return warrantyPeriod;
         }     
-        void setWarrantyPeriod(int warranty) {
-            warrantyPeriod = warranty;
+        void setWarrantyPeriod(int warrantyPeriod) {
+            this->warrantyPeriod = warrantyPeriod;
         }
 };
 // Food: This class is derived from the Product class and contains additional attributes specific to food items, 
 // such as the expiry date, nutritional information, and storage instructions.
-class Food{
+class Food : public Product{
     private:
         string expiryDate;
         string nutritionalInfo;
         string storageInstructions;
     public:
-        Food(const string &expiry, const string &info, const string &inst) :
-            expiryDate(expiry), nutritionalInfo(info), storageInstructions(inst){}
+        Food(int id, const string &name, double price, int quantity, const string &expiry, const string &info, const string &inst) :
+            Product(id, name, price, quantity), expiryDate(expiry), nutritionalInfo(info), storageInstructions(inst){}
+
+        string getCategory() const override {
+            return "Food Items";
+        }
         const string& getExpiryDate() const {
             return expiryDate;
         }
@@ -86,14 +105,14 @@ class Food{
         const string& getStorageInstructions() const {
             return storageInstructions;
         }
-        void setExpiryDate(const std::string& expiry) {
-            expiryDate = expiry;
+        void setExpiryDate(const string& expiryDate) {
+            this->expiryDate = expiryDate;
         }
-        void setNutritionalInfo(const std::string& info) {
-            nutritionalInfo = info;
+        void setNutritionalInfo(const string& nutritionalInfo) {
+            this->nutritionalInfo = nutritionalInfo;
         }
-        void setStorageInstructions(const std::string& inst) {
-            storageInstructions = inst;
+        void setStorageInstructions(const string& storageInstructions) {
+            this->storageInstructions = storageInstructions;
         }
 };
 
@@ -104,11 +123,16 @@ class MilkProduct : public Food {
     private:
         string brand;
         float fatContent;
+        string storageTemperature;
     public:
-        MilkProduct(const string& brand, float fat, const string& expiry,
-                    const string& info, const string& inst)
-            : Food(expiry, info, inst), brand(brand), fatContent(fat) {}
+        MilkProduct(int id, const string &name, double price, int quantity, const string& brand, float fat, const string& expiry,
+                    const string& info, const string& inst, const string& storageTemp)
+            : Food(id, name, price, quantity, expiry, info, inst), brand(brand), fatContent(fat), storageTemperature(storageTemp) {}
 
+        string getCategory() const override {
+            return "Milk Products";
+        }
+        
         const string& getBrand() const {
             return brand;
         }
@@ -124,7 +148,16 @@ class MilkProduct : public Food {
         void setFatContent(float fat) {
             fatContent = fat;
         }
+
+        const string& getStorageTemperature() const {
+            return storageTemperature;
+        }
+
+        void setStorageTemperature(const string& temp) {
+            storageTemperature = temp;
+        }
 };
+
 // Clothing: This class is derived from the Product class and contains additional attributes specific to clothing, 
 // such as the size, color, and material.
 
