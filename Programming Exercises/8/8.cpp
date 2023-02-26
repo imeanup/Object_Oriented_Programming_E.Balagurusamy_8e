@@ -198,17 +198,22 @@ class Clothing : public Product {
             this->material = material;
         }
 };
+
 // KitchenProduct: This class is derived from the Product class and contains additional attributes specific to kitchen products, 
 // such as the brand, material, and usage instructions.
 
-class KitchenProduct {
+class KitchenProduct : public Product {
     private:
         string brand;
         string material;
         string usageInstructions;
     public:
-        KitchenProduct(const string& brand, const string& material, const string& inst)
-            : brand(brand), material(material), usageInstructions(inst) {}
+        KitchenProduct(int id, const string &name, double price, int quantity, const string& brand, const string& material, const string& inst)
+            : Product(id, name, price, quantity), brand(brand), material(material), usageInstructions(inst) {}
+
+        string getCategory() const override {
+            return "Kitchen Products";
+        }
 
         const string& getBrand() const {
             return brand;
