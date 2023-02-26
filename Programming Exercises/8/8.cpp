@@ -199,7 +199,7 @@ class Clothing : public Product {
         }
 };
 
-// KitchenProduct: This class is derived from the Product class and contains additional attributes specific to kitchen products, 
+// KitchenProduct: This class is derived from the Product class and contains additional attributes specific to kitchen products,
 // such as the brand, material, and usage instructions.
 
 class KitchenProduct : public Product {
