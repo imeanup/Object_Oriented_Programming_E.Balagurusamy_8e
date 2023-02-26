@@ -1,4 +1,4 @@
-// TODO: Define all the functions and classes as per the relationship for a shopkeeper of the following type of items,
+// Define all the functions and classes as per the relationship for a shopkeeper of the following type of items,
 // a) Two wheeler manual, electric, and automatic
 // b) Three wheeler manual, electric and automatic
 // c) Four wheeler automatic
@@ -14,16 +14,16 @@ class Vehicle{
         string brand;
         string model;
         int year;
-        float price;
+        long long price;
 
-        Vehicle(string brand, string model, int year, float price) : brand(brand), model(model), year(year), price(price) {}
+        Vehicle(string brand, string model, int year, long long price) : brand(brand), model(model), year(year), price(price) {}
 };
 
 // TwoWheeler class derived from Vehicle
 class TwoWheeler : public Vehicle{
     public:
         string type; // manual, electric, automatic
-        TwoWheeler(string b, string m, int y, float p, string t) : Vehicle(b, m, y, p) {
+        TwoWheeler(string b, string m, int y, long long p, string t) : Vehicle(b, m, y, p) {
         type = t;
     }
 };
@@ -32,7 +32,7 @@ class TwoWheeler : public Vehicle{
 class ThreeWheeler : public Vehicle {
     public:
         string type;    // manual, electric, automatic
-        ThreeWheeler(string b, string m, int y, float p, string t) : Vehicle(b, m, y, p) {
+        ThreeWheeler(string b, string m, int y, long long p, string t) : Vehicle(b, m, y, p) {
             type = t;
         }
 };
@@ -41,7 +41,7 @@ class ThreeWheeler : public Vehicle {
 class FourWheeler : public Vehicle {
     public:
         string type;  // automatic
-        FourWheeler(string b, string m, int y, float p) : Vehicle(b, m, y, p) {
+        FourWheeler(string b, string m, int y, long long p) : Vehicle(b, m, y, p) {
             type = "automatic";
         }
 };
@@ -53,17 +53,17 @@ class Shop{
         vector<ThreeWheeler> threeWheelers; // inventory of ThreeWheelers
         vector<FourWheeler> fourWheelers;   // inventory of FourWheelers
 
-        void addTwoWheeler(string b, string m, int y, float p, string t) {
+        void addTwoWheeler(string b, string m, int y, long long p, string t) {
             TwoWheeler vehicle(b, m, y, p, t);
             twoWheelers.push_back(vehicle);
         }
 
-        void addThreeWheeler(string b, string m, int y, float p, string t) {
+        void addThreeWheeler(string b, string m, int y, long long p, string t) {
             ThreeWheeler vehicle(b, m, y, p, t);
             threeWheelers.push_back(vehicle);
         }
 
-        void addFourWheeler(string b, string m, int y, float p) {
+        void addFourWheeler(string b, string m, int y, long long p) {
             FourWheeler vehicle(b, m, y, p);
             fourWheelers.push_back(vehicle);
         }
@@ -104,7 +104,7 @@ int main() {
     myShop.addThreeWheeler("Mahindra", "Jeeto", 2020, 210000.00, "manual");
     
     myShop.addFourWheeler("Maruti Suzuki", "Swift", 2021, 760000.00);
-    myShop.addFourWheeler("Hyundai", "Creta", 2020, 112500.00);
+    myShop.addFourWheeler("Hyundai", "Creta", 2020, 1125000.00);
     
     myShop.displayTwoWheelers();
     myShop.displayThreeWheelers();
@@ -141,5 +141,5 @@ Mahindra Jeeto manual 210000
 
 FourWheeler: 
 Maruti Suzuki Swift automatic 760000
-Hyundai Creta automatic 112500
+Hyundai Creta automatic 1125000
 */
