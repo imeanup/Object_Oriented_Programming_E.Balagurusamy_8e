@@ -3,7 +3,8 @@
     "files.associations": {
         "COMMIT_EDITMSG": "bat",
         "iostream": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "iosfwd": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabledIfIncludesResolve"
 }
