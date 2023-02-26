@@ -55,7 +55,7 @@ class Electronics : public Product {
         Electronics(int id, const string &name, double price, int quantity, string &manu, float power, int warranty)
             : Product(id, name, price, quantity), manufacturer(manu), powerConsumption(power), warrantyPeriod(warranty) {}
         
-        string getCategory() const override {
+        string getCategory() const  {
             return "Electronics Appliances";
         }
 
@@ -93,7 +93,7 @@ class Food : public Product{
         Food(int id, const string &name, double price, int quantity, const string &expiry, const string &info, const string &inst) :
             Product(id, name, price, quantity), expiryDate(expiry), nutritionalInfo(info), storageInstructions(inst){}
 
-        string getCategory() const override {
+        string getCategory() const  {
             return "Food Items";
         }
         const string& getExpiryDate() const {
@@ -129,7 +129,7 @@ class MilkProduct : public Food {
                     const string& info, const string& inst, const string& storageTemp)
             : Food(id, name, price, quantity, expiry, info, inst), brand(brand), fatContent(fat), storageTemperature(storageTemp) {}
 
-        string getCategory() const override {
+        string getCategory() const  {
             return "Milk Products";
         }
 
@@ -170,7 +170,7 @@ class Clothing : public Product {
         Clothing(int id, const string &name, double price, int quantity, const string& size, const string& color, const string& material)
             : Product(id, name, price, quantity), size(size), color(color), material(material) {}
 
-        string getCategory() const override {
+        string getCategory() const  {
             return "Clothing Products";
         }
 
@@ -211,7 +211,7 @@ class KitchenProduct : public Product {
         KitchenProduct(int id, const string &name, double price, int quantity, const string& brand, const string& material, const string& inst)
             : Product(id, name, price, quantity), brand(brand), material(material), usageInstructions(inst) {}
 
-        string getCategory() const override {
+        string getCategory() const  {
             return "Kitchen Products";
         }
 
@@ -238,4 +238,8 @@ class KitchenProduct : public Product {
         void setUsageInstructions(const string& inst) {
             usageInstructions = inst;
         }
+};
+
+int main(){
+    return 0;
 };
