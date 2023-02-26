@@ -70,8 +70,7 @@ class Officer : public Education{
 // TODO: main
 
 int main(){
-    // Create objects and set member variables
-     // Create objects and set member variables
+    // TODO: Create objects and set member variables
     Teacher t;
     t.setCode(1001);
     t.setName("John Doe");
