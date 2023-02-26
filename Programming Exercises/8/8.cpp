@@ -241,5 +241,6 @@ class KitchenProduct : public Product {
 };
 
 int main(){
+    // TODO: Implement the main function. (TODO added)
     return 0;
 };
