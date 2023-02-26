@@ -8,12 +8,8 @@ Each exercise is designed to help readers understand and apply the concepts cove
 
 The project is open-source and welcomes contributions from the community. Contributors are encouraged to add their own exercises or to modify existing ones to improve the overall quality of the project.
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/imeanup/Object-Oriented-Programming-with-Cpp/releases)
-
 By completing these programming exercises, readers will gain a deeper understanding of the concepts covered in the book and develop their programming skills in C++. This project is an excellent resource for students, educators, and professionals who want to learn and practice object-oriented programming in C++.
 
 #### License
 
 MIT
-
-**Free Code, Hell Yeah!**
