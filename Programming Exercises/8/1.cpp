@@ -3,26 +3,26 @@
 using namespace std;
 
 class account {
-protected:
-    string customerName;
-    int accountNumber;
-    char accountType;
-    float balance;
-public:
-    void getAccountInfo() {
-        cout << "Enter customer name: ";
-        getline(cin, customerName);
-        cout << "Enter account number: ";
-        cin >> accountNumber;
-        cout << "Enter account type - Savings (S) or Current (C): ";
-        cin >> accountType;
-        accountType = toupper(accountType);
-        cout << "Enter initial balance: ";
-        cin >> balance;
-    }
-    void displayBalance() {
-        cout << "Current balance: " << balance << endl;
-    }
+    protected:
+        string customerName;
+        int accountNumber;
+        char accountType;
+        float balance;
+    public:
+        void getAccountInfo() {
+            cout << "Enter customer name: ";
+            getline(cin, customerName);
+            cout << "Enter account number: ";
+            cin >> accountNumber;
+            cout << "Enter account type - Savings (S) or Current (C): ";
+            cin >> accountType;
+            accountType = toupper(accountType);
+            cout << "Enter initial balance: ";
+            cin >> balance;
+        }
+        void displayBalance() {
+            cout << "Current balance: " << balance << endl;
+        }
 };
 
 class sav_acct : public account {
