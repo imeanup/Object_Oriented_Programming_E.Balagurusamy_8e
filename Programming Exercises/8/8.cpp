@@ -1,4 +1,4 @@
-// TODO: A shopkeeper wants to maintain the stock database category wise
+// A shopkeeper wants to maintain the stock database category wise
 // (Electronics appliances, food items, clothing, milk product, kitchen product). 
 // Specify all the classes and functions as per the relationship between different products.
 
@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// TODO: Product: This is the base class for all the products. 
+// Product: This is the base class for all the products. 
 // It contains the common attributes of all the products, such as the product ID, name, *description, price, and quantity.
 class Product {
     protected:
@@ -38,7 +38,7 @@ class Product {
             }
 };
 
-// TODO: ElectronicsAppliances: This class is derived from the Product class and contains additional attributes specific 
+// ElectronicsAppliances: This class is derived from the Product class and contains additional attributes specific 
 // to electronics appliances, such as the manufacturer name, power consumption, and warranty period.
 class Electronics {
     private:
@@ -96,13 +96,6 @@ class Food{
         }
 };
 
-class Clothing{
-    private:
-        string size;
-        string color;
-        string material;
-};
-
 class MilkProduct : public Food {
     private:
         string brand;
@@ -126,5 +119,73 @@ class MilkProduct : public Food {
         
         void setFatContent(float fat) {
             fatContent = fat;
+        }
+};
+
+class Clothing {
+    private:
+        string size;
+        string color;
+        string material;
+    public:
+        Clothing(const string& size, const string& color, const string& material)
+            : size(size), color(color), material(material) {}
+
+        const string& getSize() const {
+            return size;
+        }
+        
+        void setSize(const string& size) {
+            this->size = size;
+        }
+
+        const string& getColor() const {
+            return color;
+        }
+        
+        void setColor(const string& color) {
+            this->color = color;
+        }
+
+        const string& getMaterial() const {
+            return material;
+        }
+        
+        void setMaterial(const string& material) {
+            this->material = material;
+        }
+};
+
+class KitchenProduct {
+    private:
+        string brand;
+        string material;
+        string usageInstructions;
+    public:
+        KitchenProduct(const string& brand, const string& material, const string& inst)
+            : brand(brand), material(material), usageInstructions(inst) {}
+
+        const string& getBrand() const {
+            return brand;
+        }
+        
+        void setBrand(const string& brand) {
+            this->brand = brand;
+        }
+
+        const string& getMaterial() const {
+            return material;
+        }
+        
+        void setMaterial(const string& material) {
+            this->material = material;
+        }
+
+        const string& getUsageInstructions() const {
+            return usageInstructions;
+        }
+        
+        void setUsageInstructions(const string& inst) {
+            usageInstructions = inst;
         }
 };
