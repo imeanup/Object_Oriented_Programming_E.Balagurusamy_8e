@@ -92,3 +92,22 @@ class Shop{
             cout << endl;
         }
 };
+
+int main() {
+    Shop myShop;
+    
+    myShop.addTwoWheeler("Honda", "Activa", 2021, 72000.00, "automatic");
+    myShop.addTwoWheeler("Bajaj", "Pulsar", 2020, 94000.00, "manual");
+    
+    myShop.addThreeWheeler("Piaggio", "Ape", 2021, 180000.00, "electric");
+    myShop.addThreeWheeler("Mahindra", "Jeeto", 2020, 210000.00, "manual");
+    
+    myShop.addFourWheeler("Maruti Suzuki", "Swift", 2021, 760000.00);
+    myShop.addFourWheeler("Hyundai", "Creta", 2020, 1125000.00);
+    
+    myShop.displayTwoWheelers();
+    myShop.displayThreeWheelers();
+    myShop.displayFourWheelers();
+    
+    return 0;
+}
