@@ -104,7 +104,7 @@ int main() {
     myShop.addThreeWheeler("Mahindra", "Jeeto", 2020, 210000.00, "manual");
     
     myShop.addFourWheeler("Maruti Suzuki", "Swift", 2021, 760000.00);
-    myShop.addFourWheeler("Hyundai", "Creta", 2020, 1125000.00);
+    myShop.addFourWheeler("Hyundai", "Creta", 2020, 112500.00);
     
     myShop.displayTwoWheelers();
     myShop.displayThreeWheelers();
@@ -141,5 +141,5 @@ Mahindra Jeeto manual 210000
 
 FourWheeler: 
 Maruti Suzuki Swift automatic 760000
-Hyundai Creta automatic 1.125e+06
+Hyundai Creta automatic 112500
 */
