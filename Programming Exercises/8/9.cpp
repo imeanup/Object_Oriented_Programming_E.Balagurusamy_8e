@@ -5,122 +5,90 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
-// Vehicle class
-class Vehicle {
-public:
-  virtual void start() = 0;
-  virtual void stop() = 0;
-  virtual void drive() = 0;
+// Vehicle class 
+class Vehicle{
+    public:
+        string brand;
+        string model;
+        int year;
+        float price;
+
+        Vehicle(string brand, string model, int year, float price) : brand(brand), model(model), year(year), price(price) {}
 };
 
-// TwoWheeler class
-class TwoWheeler : public Vehicle {
-public:
-  virtual void start()  {
-    // Start the two-wheeler
-  }
-
-  virtual void stop()  {
-    // Stop the two-wheeler
-  }
-
-  virtual void drive()  {
-    // Drive the two-wheeler
-  }
+// TwoWheeler class derived from Vehicle
+class TwoWheeler : public Vehicle{
+    public:
+        string type; // manual, electric, automatic
+        TwoWheeler(string b, string m, int y, float p, string t) : Vehicle(b, m, y, p) {
+        type = t;
+    }
 };
 
-// ThreeWheeler class
+// ThreeWheeler class derived from Vehicle
 class ThreeWheeler : public Vehicle {
-public:
-  virtual void start()  {
-    // Start the three-wheeler
-  }
-
-  virtual void stop()  {
-    // Stop the three-wheeler
-  }
-
-  virtual void drive()  {
-    // Drive the three-wheeler
-  }
+    public:
+        string type;    // manual, electric, automatic
+        ThreeWheeler(string b, string m, int y, float p, string t) : Vehicle(b, m, y, p) {
+            type = t;
+        }
 };
 
-// FourWheeler class
+// FourWheeler class derived from Vehicle
 class FourWheeler : public Vehicle {
-public:
-  virtual void start()  {
-    // Start the four-wheeler
-  }
-
-  virtual void stop()  {
-    // Stop the four-wheeler
-  }
-
-  virtual void drive()  {
-    // Drive the four-wheeler
-  }
+    public:
+        string type;  // automatic
+        FourWheeler(string b, string m, int y, float p) : Vehicle(b, m, y, p) {
+            type = "automatic";
+        }
 };
 
-// ManualTwoWheeler class
-class ManualTwoWheeler : public TwoWheeler {
-public:
-  // Additional functions and variables for manual two-wheelers
+// Shop class to manage the inventory
+class Shop{
+    public:
+        vector<TwoWheeler> twoWheelers;     // inventory of TwoWheelers
+        vector<ThreeWheeler> threeWheelers; // inventory of ThreeWheelers
+        vector<FourWheeler> fourWheelers;   // inventory of FourWheelers
+
+        void addTwoWheeler(string b, string m, int y, float p, string t) {
+            TwoWheeler vehicle(b, m, y, p, t);
+            twoWheelers.push_back(vehicle);
+        }
+
+        void addThreeWheeler(string b, string m, int y, float p, string t) {
+            ThreeWheeler vehicle(b, m, y, p, t);
+            threeWheelers.push_back(vehicle);
+        }
+
+        void addFourWheeler(string b, string m, int y, float p) {
+            FourWheeler vehicle(b, m, y, p);
+            fourWheelers.push_back(vehicle);
+        }
+
+        void displayTwoWheelers() {
+            cout << "TwoWheelers:" << endl;
+            for (TwoWheeler vehicle : twoWheelers) {
+                cout << vehicle.brand << " " << vehicle.model << " " << vehicle.type << " " << vehicle.price << endl;
+            }
+            cout << endl;
+        }
+
+        void displayThreeWheelers() {
+            cout << "ThreeWheelers:" << endl;
+            for (ThreeWheeler vehicle : threeWheelers) {
+                cout << vehicle.brand << " " << vehicle.model << " " << vehicle.type << " " << vehicle.price << endl;
+            }
+            cout << endl;
+        }
+
+        void displayFourWheelers(){
+            cout << "FourWheeler: " << endl;
+            for (FourWheeler vehicle : fourWheelers){
+                cout << vehicle.brand << " " << vehicle.model << " " << vehicle.type << " " << vehicle.price << endl;
+            }
+            cout << endl;
+        }
 };
-
-// ElectricTwoWheeler class
-class ElectricTwoWheeler : public TwoWheeler {
-public:
-  // Additional functions and variables for electric two-wheelers
-};
-
-// AutomaticTwoWheeler class
-class AutomaticTwoWheeler : public TwoWheeler {
-public:
-  // Additional functions and variables for automatic two-wheelers
-};
-
-// ManualThreeWheeler class
-class ManualThreeWheeler : public ThreeWheeler {
-public:
-  // Additional functions and variables for manual three-wheelers
-};
-
-// ElectricThreeWheeler class
-class ElectricThreeWheeler : public ThreeWheeler {
-public:
-  // Additional functions and variables for electric three-wheelers
-};
-
-// AutomaticThreeWheeler class
-class AutomaticThreeWheeler : public ThreeWheeler {
-public:
-  // Additional functions and variables for automatic three-wheelers
-};
-
-// AutomaticFourWheeler class
-class AutomaticFourWheeler : public FourWheeler {
-public:
-  // Additional functions and variables for automatic four-wheelers
-};
-
-// Shopkeeper class
-class Shopkeeper {
-public:
-  void sellTwoWheeler(TwoWheeler* vehicle) {
-    // Sell the two-wheeler
-  }
-
-  void sellThreeWheeler(ThreeWheeler* vehicle) {
-    // Sell the three-wheeler
-  }
-
-  void sellFourWheeler(FourWheeler* vehicle) {
-    // Sell the four-wheeler
-  }
-};
-
-int main(){
-    return 0;
-}
