@@ -45,6 +45,12 @@ class Admin : virtual public Person{
 
 class Master : public Account, public Admin{
     protected:
-        
+        // No declaration
     public:
+
 };
+
+int main(){
+    Master m;
+    
+}
