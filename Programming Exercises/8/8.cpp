@@ -37,3 +37,33 @@ class Product {
             this->quantity = quantity; 
             }
 };
+
+// TODO: ElectronicsAppliances: This class is derived from the Product class and contains additional attributes specific 
+// to electronics appliances, such as the manufacturer name, power consumption, and warranty period.
+class Electronics {
+    private:
+        string manufacturer;
+        float powerConsumption;
+        int warrantyPeriod;
+    public:
+        Electronics(string &manu, float power, int warranty)
+            : manufacturer(manu), powerConsumption(power), warrantyPeriod(warranty) {}
+        const string &getManufacturer() const {
+            return manufacturer;
+        }
+        void setManufacturer(const string &manu){
+            manufacturer = manu;
+        }
+        float getPowerConsumption() const{
+            return powerConsumption;
+        }
+        void setPowerConsumption(float power) {
+            powerConsumption = power;
+        }
+        int getWarrantyPeriod() const {
+            return warrantyPeriod;
+        }     
+        void setWarrantyPeriod(int warranty) {
+            warrantyPeriod = warranty;
+        }
+};
