@@ -67,3 +67,31 @@ class Electronics {
             warrantyPeriod = warranty;
         }
 };
+
+class Food{
+    private:
+        string expiryDate;
+        string nutritionalInfo;
+        string storageInstructions;
+    public:
+        Food(const string &expiry, const string &info, const string &inst) :
+            expiryDate(expiry), nutritionalInfo(info), storageInstructions(inst){}
+        const string& getExpiryDate() const {
+            return expiryDate;
+        }
+        const string& getNutritionalInfo() const {
+            return nutritionalInfo;
+        }
+        const string& getStorageInstructions() const {
+            return storageInstructions;
+        }
+        void setExpiryDate(const std::string& expiry) {
+            expiryDate = expiry;
+        }
+        void setNutritionalInfo(const std::string& info) {
+            nutritionalInfo = info;
+        }
+        void setStorageInstructions(const std::string& inst) {
+            storageInstructions = inst;
+        }
+};
