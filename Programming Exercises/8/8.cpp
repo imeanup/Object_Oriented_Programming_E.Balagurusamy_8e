@@ -19,7 +19,7 @@ class Product {
 
     public:
         Product(int id, string name, double price, int quantity) : name(name), id(id), price(price), quantity(quantity) {}
-        virtual ~Product();
+        ~Product() {}
         virtual string getCategory() const = 0;
         string getName() const { 
             return name; 
@@ -67,7 +67,8 @@ class Electronics {
             warrantyPeriod = warranty;
         }
 };
-
+// Food: This class is derived from the Product class and contains additional attributes specific to food items, 
+// such as the expiry date, nutritional information, and storage instructions.
 class Food{
     private:
         string expiryDate;
@@ -96,6 +97,9 @@ class Food{
         }
 };
 
+// MilkProduct: This class is derived from the Product class and contains additional attributes specific to milk products, 
+// such as the brand, fat content, and storage instructions.
+
 class MilkProduct : public Food {
     private:
         string brand;
@@ -121,6 +125,8 @@ class MilkProduct : public Food {
             fatContent = fat;
         }
 };
+// Clothing: This class is derived from the Product class and contains additional attributes specific to clothing, 
+// such as the size, color, and material.
 
 class Clothing {
     private:
@@ -155,6 +161,8 @@ class Clothing {
             this->material = material;
         }
 };
+// KitchenProduct: This class is derived from the Product class and contains additional attributes specific to kitchen products, 
+// such as the brand, material, and usage instructions.
 
 class KitchenProduct {
     private:
