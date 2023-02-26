@@ -1,3 +1,7 @@
+// TODO: A shopkeeper wants to maintain the stock database category wise
+// (Electronics appliances, food items, clothing, milk product, kitchen product). 
+// Specify all the classes and functions as per the relationship between different products.
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -99,4 +103,3 @@ public:
     }
     string getCategory() { return "Kitchen Product"; }
 };
-
