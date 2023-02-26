@@ -95,3 +95,17 @@ class Food{
             storageInstructions = inst;
         }
 };
+
+class Clothing{
+    private:
+        string size;
+        string color;
+        string material;
+};
+
+class Milk : public Food{
+    private:
+        string brand;
+        float fatContent;
+        // string storageInstruction;
+};
