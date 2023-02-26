@@ -11,7 +11,7 @@ class account {
     public:
         void getAccountInfo() {
             cout << "Enter customer name: ";
-            getline(cin, customerName);
+            cin >> customerName;
             cout << "Enter account number: ";
             cin >> accountNumber;
             cout << "Enter account type - Savings (S) or Current (C): ";
