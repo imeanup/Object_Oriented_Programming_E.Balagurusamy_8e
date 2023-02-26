@@ -132,7 +132,7 @@ class MilkProduct : public Food {
         string getCategory() const override {
             return "Milk Products";
         }
-        
+
         const string& getBrand() const {
             return brand;
         }
@@ -161,14 +161,18 @@ class MilkProduct : public Food {
 // Clothing: This class is derived from the Product class and contains additional attributes specific to clothing, 
 // such as the size, color, and material.
 
-class Clothing {
+class Clothing : public Product {
     private:
         string size;
         string color;
         string material;
     public:
-        Clothing(const string& size, const string& color, const string& material)
-            : size(size), color(color), material(material) {}
+        Clothing(int id, const string &name, double price, int quantity, const string& size, const string& color, const string& material)
+            : Product(id, name, price, quantity), size(size), color(color), material(material) {}
+
+        string getCategory() const override {
+            return "Clothing Products";
+        }
 
         const string& getSize() const {
             return size;
