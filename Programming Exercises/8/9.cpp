@@ -94,6 +94,7 @@ class Shop{
 };
 
 int main() {
+    // create a new shop
     Shop myShop;
     
     myShop.addTwoWheeler("Honda", "Activa", 2021, 72000.00, "automatic");
@@ -111,3 +112,34 @@ int main() {
     
     return 0;
 }
+
+/*
+g++ -std=c++11 9.cpp -o 9
+
+Alternately, you can replace the range-based for loop with a traditional for loop to avoid the warning. 
+Here's an example of how you can modify the displayTwoWheelers() function to use a traditional for loop:
+
+// display all the TwoWheelers in the inventory
+void displayTwoWheelers() {
+    cout << "TwoWheelers:" << endl;
+    for (int i = 0; i < twoWheelers.size(); i++) {
+        TwoWheeler vehicle = twoWheelers[i];
+        cout << vehicle.brand << " " << vehicle.model << " " << vehicle.type << " " << vehicle.price << endl;
+    }
+    cout << endl;
+}
+
+output:
+
+TwoWheelers:
+Honda Activa automatic 72000
+Bajaj Pulsar manual 94000
+
+ThreeWheelers:
+Piaggio Ape electric 180000
+Mahindra Jeeto manual 210000
+
+FourWheeler: 
+Maruti Suzuki Swift automatic 760000
+Hyundai Creta automatic 1.125e+06
+*/
