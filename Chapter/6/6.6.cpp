@@ -44,3 +44,13 @@ int main(){
     cout << A.put_element(1, 2);
     return 0;
 }
+
+/*
+Ener size of matrix: 3 4
+Enter matrix elements row by row
+11 12 13 14
+15 16 17 18
+19 20 21 22
+
+17
+*/
