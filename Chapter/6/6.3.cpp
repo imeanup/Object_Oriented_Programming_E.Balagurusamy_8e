@@ -70,3 +70,24 @@ int main(){
 
     return 0;
 }
+
+/*
+Enter amount, period, interest rate(in percent)
+10000 3 18
+Enter amount, period, interest rate(decimal form)
+10000 3 .18
+Enter the amount and period
+10000 3
+
+Deposit 1
+Principal Amount = 10000
+Return Value = 16430.3
+
+Deposit 2
+Principal Amount = 10000
+Return Value = 0
+
+Display 3
+Principal Amount = 10000
+Return Value = 0
+*/
