@@ -26,11 +26,11 @@ class String{
 
 void String :: join(String &a, String &b){
     length = a.length + b.length;
-    delete name;
+    delete[] name;
     name = new char[length + 1];
 
     strcpy(name, a.name);
-    strcpy(name, b.name);
+    strcat(name, b.name);
 };
 
 int main(){
