@@ -30,3 +30,10 @@ int main()
 
     return 0;
 }
+
+/*
+Enter the number of elements: 9
+Enter the elements: 10 7 9 6 5 4 2 1 3 8
+Variance = 8.39506
+Standard Deviation = 2.89742
+*/
