@@ -9,6 +9,7 @@ int main(){
     cout << "Enter the value of x in radians: ";
     cin >> x;
 
+    // The nth term of the series using the formula (-1)^n * x^(2n+1) / (2n+1)!.
     do{
         term = pow(-1, n)* pow(x, 2*n+1)/tgamma(2*n+2);
         sum += term;
@@ -20,3 +21,4 @@ int main(){
 
     return 0;
 }
+
