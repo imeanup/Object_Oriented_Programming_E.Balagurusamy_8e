@@ -2,31 +2,31 @@
 #include <cmath>
 using namespace std;
 
-int main() {
-   int n;
-   double sum = 0, mean, variance = 0;
+int main()
+{
+    int N;
+    double xi, x = 0.0, sum = 0.0, variance, stddev;
 
-   cout << "Enter the number of elements: ";
-   cin >> n;
+    cout << "Enter the number of elements: ";
+    cin >> N;
 
-   double numbers[n];
+    double arr[N];
 
-   cout << "Enter the elements: ";
-   for (int i = 0; i < n; i++) {
-      cin >> numbers[i];
-      sum += numbers[i];
-   }
+    cout << "Enter the elements: ";
+    for (int i = 0; i < N; i++) {
+        cin >> arr[i];
+        x += arr[i];
+    }
+    x /= N;
 
-   mean = sum / n;
+    for (int i = 0; i < N; i++) {
+        sum += pow(arr[i] - x, 2);
+    }
+    variance = sum / N;
+    stddev = sqrt(variance);
 
-   for (int i = 0; i < n; i++) {
-      variance += pow(numbers[i] - mean, 2);
-   }
+    cout << "Variance = " << variance << endl;
+    cout << "Standard Deviation = " << stddev << endl;
 
-   variance /= n;
-
-   cout << "Variance: " << variance << endl;
-   cout << "Standard Deviation: " << sqrt(variance) << endl;
-
-   return 0;
+    return 0;
 }
