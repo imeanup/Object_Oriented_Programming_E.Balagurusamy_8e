@@ -12,10 +12,10 @@ int main(){
     cin >> num_users;
 
     for (int i = 0; i < num_users; i++){
-        cout << "Enter the name of user " << i+1 << ":";
+        cout << "Enter the name of user " << i+1 << ": ";
         cin >> name;
 
-        cout << "Enter the number of units consumed by " << name << ":";
+        cout << "Enter the number of units consumed by " << name << ": ";
         cin >> units;
 
         if (units <= 100) charges = units * 0.6;
@@ -26,7 +26,7 @@ int main(){
         charges = max(charges, 50.0);
         if (charges > 300) charges *= 1.15; 
 
-        cout << "Charges for " << name << "= Rs. " << charges << endl;
+        cout << "Charges for " << name << " is Rs. " << charges << endl;
     }
     return 0;
 }
