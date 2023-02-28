@@ -30,3 +30,21 @@ int main(){
     }
     return 0;
 }
+/*
+Enter the number of users: 5
+Enter the name of user 1: Jones
+Enter the number of units consumed by Jones: 100
+Charges for Jones is Rs. 60
+Enter the name of user 2: Amanda
+Enter the number of units consumed by Amanda: 98
+Charges for Amanda is Rs. 58.8
+Enter the name of user 3: Lu  
+Enter the number of units consumed by Lu: 345
+Charges for Lu is Rs. 275
+Enter the name of user 4: Adam
+Enter the number of units consumed by Adam: 400
+Charges for Adam is Rs. 379.5
+Enter the name of user 5: Jolus
+Enter the number of units consumed by Jolus: 0
+Charges for Jolus is Rs. 50
+*/
