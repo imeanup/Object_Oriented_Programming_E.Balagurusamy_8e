@@ -4,14 +4,17 @@ using namespace std;
 
 int main()
 {
-    double sum = 1.0, term;
-    int n = 2;
+    double sum = 1.0, term, n = 2.0;
 
-    do {
+    cout << "Enter the number of terms: ";
+    int num_terms;
+    cin >> num_terms;
+
+    for (int i = 1; i <= num_terms; i++) {
         term = pow(1.0 / n, n);
         sum += term;
         n++;
-    } while (abs(term / sum) > 0.000001);
+    }
 
     cout << "The sum of the series is " << sum << endl;
 
