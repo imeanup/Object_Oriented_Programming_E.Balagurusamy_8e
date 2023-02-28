@@ -22,3 +22,4 @@ int main(){
     return 0;
 }
 
+// tgamma: https://en.cppreference.com/w/cpp/numeric/math/tgamma
