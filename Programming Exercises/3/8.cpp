@@ -10,15 +10,15 @@ int main()
     cout << "Table for Y = EXP[-X]\n\n";
     cout << "X\t";
     for (x = 0.0; x <= 1.0; x += 0.1) {
-        cout << fixed << setprecision(1) << x << "\t";
+        cout << setw(10) << x << "\t";
     }
     cout << endl;
 
     for (x = 0.0; x <= 9.0; x++) {
-        cout << fixed << setprecision(1) << x << "\t";
+        cout << setw(10) << x << "\t";
         for (double i = 0.0; i <= 1.0; i += 0.1) {
             y = exp(-x);
-            cout << fixed << setprecision(5) << y << "\t";
+            cout << setw(10) << y << "\t";
         }
         cout << endl;
     }
