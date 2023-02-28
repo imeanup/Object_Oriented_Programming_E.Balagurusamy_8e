@@ -5,12 +5,10 @@ using namespace std;
 int main()
 {
     double sum = 1.0, term;
-    int n = 2, x;
-    cout << "Enter the value of x: ";
-    cin >> x;
-    
+    int n = 2;
+
     do {
-        term = pow(1.0 / x, x);
+        term = pow(1.0 / n, n);
         sum += term;
         n++;
     } while (abs(term / sum) > 0.000001);
