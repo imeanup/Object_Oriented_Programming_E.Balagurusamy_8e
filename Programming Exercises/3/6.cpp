@@ -11,6 +11,11 @@ class Player
         int innings;
         int not_out;
         float average;
+
+        
+        void display(){
+            cout << setw(10) << name << setw(10) << runs << setw(10) << innings << setw(10) << not_out << setw(10) << average << endl;
+        }
 };
  
  int main() {
