@@ -11,6 +11,12 @@ int main(){
 
     do{
         term = pow(-1, n)* pow(x, 2*n+1)/tgamma(2*n+2);
+        sum += term;
+        n++;
     }
     while (abs(term/sum) > 0.000001);
+
+    cout << "sin(" << x << ") = " << sum << endl;
+
+    return 0;
 }
