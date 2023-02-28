@@ -11,15 +11,13 @@ int main()
     cout << "X\t";
     for (x = 0.0; x <= 1.0; x += 0.1) {
         cout << fixed << setprecision(1) << x << "\t"; 
-        // Page 55, we may also control the pecision of floating point numbers appearing
-        // in the output by using the fixed and setprecision() manipulator.
     }
     cout << endl;
 
     for (x = 0.0; x <= 9.0; x++) {
         cout << fixed << setprecision(1) << x << "\t";
         for (double i = 0.0; i <= 1.0; i += 0.1) {
-            y = exp(-x);
+            y = exp(-x); 
             cout << fixed << setprecision(5) << y << "\t";
         }
         cout << endl;
@@ -43,4 +41,14 @@ X       0.0     0.1     0.2     0.3     0.4     0.5     0.6     0.7     0.8     
 7.0     0.00091 0.00091 0.00091 0.00091 0.00091 0.00091 0.00091 0.00091 0.00091 0.00091 0.00091
 8.0     0.00034 0.00034 0.00034 0.00034 0.00034 0.00034 0.00034 0.00034 0.00034 0.00034 0.00034
 9.0     0.00012 0.00012 0.00012 0.00012 0.00012 0.00012 0.00012 0.00012 0.00012 0.00012 0.00012
+*/
+
+/*
+
+Page 55: We may also control the pecision of floating point numbers appearing
+in the output by using the fixed and setprecision() manipulator.
+cout << fixed << setprecison(2) << average;
+
+exp: https://cplusplus.com/reference/cmath/exp/
+
 */
