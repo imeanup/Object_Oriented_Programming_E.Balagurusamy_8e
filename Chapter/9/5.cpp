@@ -17,7 +17,7 @@ int main(){
         }
     }
     if (i == 4){
-        cout << "\n\nYour favorite " << "not available here" << endl;
+        cout << "Your favorite " << "not available here" << endl;
     }
     return 0;
 }
