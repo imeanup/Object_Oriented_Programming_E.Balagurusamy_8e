@@ -8,7 +8,7 @@ int main(){
         "books", "tv", "computer", "sports"
     };
     char str[25];
-    cout << "\n\n\n\nEnter your favorite leisure pursuit: ";
+    cout << "Enter your favorite leisure pursuit: ";
     cin >> str;
     for (i = 0; i < 4; i++){
         if (!strcmp(str, ptr[i])){
