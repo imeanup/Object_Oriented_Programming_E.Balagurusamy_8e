@@ -4,8 +4,8 @@ using namespace std;
 int main(){
     int a = 10;
     int *ptr;
-    // ptr = &a;
-    cout << "The value of a is: " << *ptr << endl;
+    ptr = &a;
+    cout << "The value of a is: " << *ptr << endl; // cout << ptr; result pointer address
     *ptr = *ptr + a;
     cout << "The revised value of a is: " << *ptr << endl;
     return 0;
