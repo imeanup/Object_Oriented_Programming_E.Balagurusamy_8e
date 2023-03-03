@@ -14,7 +14,4 @@ int main(){
 }
 
 /*
-This is the documnet which we will be covering during the class of the semester of 
-the year and will learn how to modify the content of the book as this is interseting to have a 
-detail analysis and study guid for the book
 */
