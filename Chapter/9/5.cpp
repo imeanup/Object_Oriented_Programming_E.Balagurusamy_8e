@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
     int i = 0; 
-    char *ptr[10] = {
+    const char *ptr[10] = {
         "books", "tv", "computer", "sports"
     };
     char str[25];
