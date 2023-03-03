@@ -12,3 +12,7 @@ int main(){
     cout << var2 << endl;
     return 0;
 }
+
+/*
+
+*/
