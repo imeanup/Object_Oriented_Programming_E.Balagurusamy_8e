@@ -25,4 +25,23 @@ class city{
         }
 };
 
-int main(){}
+int main(){
+    city *cptr[10];
+    int n = 1;
+    int option;
+
+    do{
+        cptr[n] = new city;
+        cptr[n]->getname();
+        n++;
+        cout << "Do you want to enter one more name?" << endl;
+        cout << "Enter 1 for Yes 0 for No" << endl;
+        cin >> option;
+    }
+    while (option);
+    cout << endl;
+    for (int i = 1; i <= n; i++){
+        cptr[i] -> printname();
+    }
+    return 0;
+}
