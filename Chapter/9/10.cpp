@@ -11,13 +11,8 @@ class person{
             strcpy(name, s);
             age = a;
         }
-        person &person :: greater(person &x){
-            if (x.age >= age){
-                return x;
-            }
-            else{
-                return *this;
-            }
+        const person& greater(const person &x) const{
+            return x.age >= age ? x:*this;
         }
         void display(void){
             cout << "Name: " << name << endl << "Age: " << age << endl;
