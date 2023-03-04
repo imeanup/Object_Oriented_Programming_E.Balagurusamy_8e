@@ -30,6 +30,10 @@ public:
 };
 
 int main() {
+    /*
+    // to avoid segmentation fault
+    city *cptr[10]; // going out of bounds of the allocated memory for the array of city objects
+    */
     vector<city*> cptr;
     int n = 1;
     int option;
