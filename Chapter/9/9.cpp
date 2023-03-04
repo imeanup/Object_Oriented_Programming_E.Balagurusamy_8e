@@ -1,47 +1,52 @@
 #include <iostream>
 #include <cstring>
+#include <vector>
+
 using namespace std;
 
-class city{
-    protected:
-        char *name;
-        int len;
-    public:
-        city(){
-            len = 0;
-            name = new char[len+1];
-        }
-        void getname(void){
-            char *s;
-            s = new char[30];
-            cout << "Enter city name: ";
-            cin >> s;
-            len = strlen(s);
-            name = new char[len+1];
-            strcpy(name, s);
-        }
-        void printname(void){
-            cout << name << endl;
-        }
+class city {
+protected:
+    char* name;
+    int len;
+public:
+    city() {
+        len = 0;
+        name = new char[len + 1];
+    }
+    ~city() {
+        delete[] name;
+    }
+    void getname(void) {
+        char s[30];
+        cout << "Enter city name: ";
+        cin >> s;
+        len = strlen(s);
+        name = new char[len + 1];
+        strcpy(name, s);
+    }
+    void printname(void) {
+        cout << name << endl;
+    }
 };
 
-int main(){
-    city *cptr[10];
+int main() {
+    vector<city*> cptr;
     int n = 1;
     int option;
 
-    do{
-        cptr[n] = new city;
-        cptr[n]->getname();
-        n++;
+    do {
+        city* c = new city;
+        c->getname();
+        cptr.push_back(c);
         cout << "Do you want to enter one more name?" << endl;
         cout << "Enter 1 for Yes 0 for No" << endl;
         cin >> option;
-    }
-    while (option);
+    } while (option);
+
     cout << endl;
-    for (int i = 1; i <= n; i++){
-        cptr[i] -> printname();
+    for (int i = 0; i < cptr.size(); i++) {
+        cptr[i]->printname();
+        delete cptr[i]; // free the dynamically allocated memory
     }
     return 0;
 }
