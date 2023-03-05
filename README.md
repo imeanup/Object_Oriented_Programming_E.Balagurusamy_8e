@@ -9,7 +9,3 @@ Each exercise is designed to help readers understand and apply the concepts cove
 This repo is open-source and welcomes contributions from the community. Contributors are encouraged to add their own exercises or to modify existing ones to improve the overall quality of the programming exercises.
 
 By completing these programming exercises, readers will gain a deeper understanding of the concepts covered in the book and develop their programming skills in C++. This project is an excellent resource for students, educators, and professionals who want to learn and practice object-oriented programming in C++.
-
-#### License
-
-MIT
