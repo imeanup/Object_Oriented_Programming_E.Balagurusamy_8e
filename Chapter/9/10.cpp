@@ -19,8 +19,6 @@ class person{
         }
 };
 
-//Changes to be made
-
 int main(){
     person P1("John", 37.50), P2("Ahmed", 29.0), P3("Hebber", 40.25);
 
@@ -34,3 +32,12 @@ int main(){
 
     return 0;
 }
+
+/*
+Elder person is :
+Name: Hebber
+Age: 40.25
+Elder person is: 
+Name: John
+Age: 37.5
+*/
