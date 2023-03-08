@@ -62,6 +62,26 @@ int main(){
 
     bool found_book = false;
 
-    
+    for (int i = 0; i < 4; i++) {
+        if (inventory[i]->searchBook(author, title)) {
+            found_book = true;
+            inventory[i]->display();
+            cout << endl;
+            int num_copies;
+            cout << "Enter number of copies to sell: ";
+            cin >> num_copies;
+            inventory[i] -> sales(num_copies);
+            break;
+        }
+    }
+    if (!found_book){
+        cout << "Book not found in inventory" << endl;
+    }
 
+    delete book1;
+    delete book2;
+    delete book3;
+    delete book4;
+    
+    return 0;
 }
