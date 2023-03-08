@@ -34,7 +34,7 @@ class Vector{
 };
 
 int main(){
-    vector<float> elements = {10.5, 20.4, 30.7};
+    vector<float> elements = {10.0, 20.0, 30.0};
     Vector v(elements);
     v.display();
 
