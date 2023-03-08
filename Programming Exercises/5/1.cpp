@@ -1,19 +1,3 @@
-/*
-Define a lass to represent a bank account. Inlcude the following members:
-Data members
-a) Name of the depositor
-b) Account number
-c) Type of account
-d) Balance amount in the account
-
-Member functions:
-a) To assign initial values
-b) To deposit an amount
-c) To withdraw an amount after checking the balance
-d) To display name and balance
-
-Write a main program to test the program.
-*/
 #include<iostream>
 #include<string>
 
@@ -26,11 +10,11 @@ class BankAccount {
     float balance;
 
 public:
-    BankAccount(string name, int accountNumber, string type, float balance) {
-        this->name = name;
-        this->accountNumber = accountNumber;
-        this->type = type;
-        this->balance = balance;
+    BankAccount(string name_, int accountNumber_, string type_, float balance_) {
+        name = name_;
+        accountNumber = accountNumber_;
+        type = type_;
+        balance = balance_;
     }
 
     void deposit(float amount) {
@@ -67,3 +51,21 @@ int main() {
 
     return 0;
 }
+
+
+/*
+Define a lass to represent a bank account. Inlcude the following members:
+Data members
+a) Name of the depositor
+b) Account number
+c) Type of account
+d) Balance amount in the account
+
+Member functions:
+a) To assign initial values
+b) To deposit an amount
+c) To withdraw an amount after checking the balance
+d) To display name and balance
+
+Write a main program to test the program.
+*/
