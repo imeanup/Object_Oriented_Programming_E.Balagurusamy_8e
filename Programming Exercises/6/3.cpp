@@ -63,7 +63,7 @@ int main(){
     bool found_book = false;
 
     for (int i = 0; i < 4; i++) {
-        if (inventory[i]->searchBook(author, title)) {
+        if (inventory[i]->searchBook(title, author)) {
             found_book = true;
             inventory[i]->display();
             cout << endl;
