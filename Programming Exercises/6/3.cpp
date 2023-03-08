@@ -46,7 +46,7 @@ class Books{
 };
 
 int main(){
-    // TODO: Create inventory
+    // Create inventory
     Books* book1 = new Books("J.K. Rowling", "Harry Potter and the Philosopher's Stone", 10.99, "Bloomsbury Publishing", 5);
     Books* book2 = new Books("J.R.R. Tolkien", "The Lord of the Rings", 19.99, "HarperCollins", 2);
     Books* book3 = new Books("Stephen King", "It", 9.99, "Viking Press", 0);
@@ -54,14 +54,11 @@ int main(){
 
     Books* inventory[] = {book1, book2, book3, book4};
 
-    // TODO: Search
     string author, title;
     cout << "Enter author: ";
     getline(cin, author);
     cout << "Enter title: ";
     getline(cin, title);
-
-    // TODO: Sales
 
     bool found_book = false;
 
