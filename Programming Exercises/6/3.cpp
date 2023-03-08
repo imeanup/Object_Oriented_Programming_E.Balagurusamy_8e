@@ -34,7 +34,10 @@ class Books{
             cout << "Stock: " << stock_position << endl;
         }
 
-        void sales(int num_copies){
+        void sales(){
+            int num_copies;
+            cout << "Enter number of copies to sell: ";
+            cin >> num_copies;
             if (num_copies > stock_position){
                 cout << "Required copies not in stock" << endl;
             }
@@ -67,10 +70,8 @@ int main(){
             found_book = true;
             inventory[i]->display();
             cout << endl;
-            int num_copies;
-            cout << "Enter number of copies to sell: ";
-            cin >> num_copies;
-            inventory[i] -> sales(num_copies);
+            
+            inventory[i] -> sales();
             break;
         }
     }
