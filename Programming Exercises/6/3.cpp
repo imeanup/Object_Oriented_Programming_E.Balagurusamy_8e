@@ -29,7 +29,7 @@ class Books{
         void display(){
             cout << "Title: " << title << endl;
             cout << "Author: " << author << endl;
-            cout << "Price: " << price << endl;
+            cout << "Price: $" << price << endl;
             cout << "Publisher: " << publisher << endl;
             cout << "Stock: " << stock_position << endl;
         }
@@ -38,11 +38,12 @@ class Books{
             int num_copies;
             cout << "Enter number of copies to sell: ";
             cin >> num_copies;
+            cout << endl;
             if (num_copies > stock_position){
                 cout << "Required copies not in stock" << endl;
             }
             else{
-                cout << "Total cost: " << price * stock_position << endl;
+                cout << "Total cost: $" << price * stock_position << endl;
                 stock_position -= num_copies;
             }
         }
