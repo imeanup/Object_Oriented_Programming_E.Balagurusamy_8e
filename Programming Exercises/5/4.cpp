@@ -1,0 +1,1 @@
+// Modify the class and program of Ex 5.2 such that the program would be able to add two vectors and display the resultant vector.(Note that we can pass object as function arguments.)
