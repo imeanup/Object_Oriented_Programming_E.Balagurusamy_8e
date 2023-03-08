@@ -11,8 +11,8 @@ class Vector{
             elements = elems;
         }
 
-        void setElements(int index, float values){
-            elements[index] = values;
+        void setElement(int index, float value){
+            elements[index] = value;
         }
 
         void scalarMultiply(float scalar){
@@ -39,7 +39,7 @@ int main(){
     Vector v = {10.0, 20.0, 30.0};
     v.display();
 
-    v.setElements(1, 9.8);
+    v.setElement(1, 9.8);
     v.display();
 
     v.scalarMultiply(2.1);
@@ -47,6 +47,7 @@ int main(){
 
     return 0;
 }
+
 /*
 Write a class to represent a vector (a series of float values). Include member functions to perform the following tasks:
 (a) To create the vector.
