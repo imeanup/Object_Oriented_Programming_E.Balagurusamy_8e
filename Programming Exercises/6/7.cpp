@@ -39,6 +39,7 @@ void Cars :: display(){
     cout << "Model: " << model << endl;
     cout << "Year: " << year << endl;
     cout << "Mileage: " << mileage << endl;
+    cout << endl;
 }
 
 int main(){
