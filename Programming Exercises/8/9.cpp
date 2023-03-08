@@ -70,7 +70,8 @@ class Shop{
 
         void displayTwoWheelers() {
             cout << "TwoWheelers:" << endl;
-            for (TwoWheeler vehicle : twoWheelers) {
+            for (int i = 0; i < twoWheelers.size(); i++) {
+                TwoWheeler vehicle = twoWheelers[i];
                 cout << vehicle.brand << " " << vehicle.model << " " << vehicle.type << " " << vehicle.price << endl;
             }
             cout << endl;
@@ -78,7 +79,8 @@ class Shop{
 
         void displayThreeWheelers() {
             cout << "ThreeWheelers:" << endl;
-            for (ThreeWheeler vehicle : threeWheelers) {
+            for (int i = 0; i < threeWheelers.size(); i++) {
+                ThreeWheeler vehicle = threeWheelers[i];
                 cout << vehicle.brand << " " << vehicle.model << " " << vehicle.type << " " << vehicle.price << endl;
             }
             cout << endl;
@@ -86,7 +88,8 @@ class Shop{
 
         void displayFourWheelers(){
             cout << "FourWheeler: " << endl;
-            for (FourWheeler vehicle : fourWheelers){
+            for (int i = 0; i < fourWheelers.size(); i++){
+                FourWheeler vehicle = fourWheelers[i];
                 cout << vehicle.brand << " " << vehicle.model << " " << vehicle.type << " " << vehicle.price << endl;
             }
             cout << endl;
