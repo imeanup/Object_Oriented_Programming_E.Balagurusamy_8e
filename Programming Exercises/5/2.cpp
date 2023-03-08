@@ -36,6 +36,13 @@ class Vector{
 int main(){
     vector<float> elements = {10.5, 20.4, 30.7};
     Vector v(elements);
+    /*
+    // using complier before c++11 use: g++ 2.cpp -o 2, and replace the below code.
+    vector<float> elements;
+    elements.push_back(10.0);
+    elements.push_back(20.0);
+    elements.push_back(30.0);
+    */
     v.display();
 
     v.setElements(1, 9.8);
