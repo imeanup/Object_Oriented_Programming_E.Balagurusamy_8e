@@ -7,7 +7,7 @@ class Vector{
     private:
         vector<float> elements;
     public:
-        Vector(vector<float> elems){
+        Vector(initializer_list<float> elems){
             elements = elems;
         }
 
@@ -34,8 +34,9 @@ class Vector{
 };
 
 int main(){
-    vector<float> elements = {10.0, 20.0, 30.0};
-    Vector v(elements);
+    // vector<float> elements = {10.0, 20.0, 30.0};
+    // Vector v(elements);
+    Vector v = {10.0, 20.0, 30.0};
     v.display();
 
     v.setElements(1, 9.8);
