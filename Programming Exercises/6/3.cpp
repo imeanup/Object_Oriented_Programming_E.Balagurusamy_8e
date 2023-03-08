@@ -2,3 +2,6 @@
 
 using namespace std;
 
+class Books{
+
+};
