@@ -20,7 +20,10 @@ class Books{
         }
 
         bool searchBook(string title, string author){
-            return (this->author == author && this->title == title) ? true : false;
+            if (this->author == author && this->title == title) 
+                return true;
+            else
+                return false;
         }
 
         void display(){
