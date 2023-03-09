@@ -65,6 +65,18 @@ int main(){
     B.read();
 
     if (n != p){
-        
+        cout << "Error: The number of columns in matrix A must equal the number of rows in matrix B." << endl;
+        exit(1);
     }
+
+    Matrix C = A*B;
+    
+    cout << "Matrix A:" << endl;
+    A.display();
+    cout << "Matrix B:" << endl;
+    B.display();
+    cout << "Matrix C = A * B:" << endl;
+    C.display();
+
+    return 0;
 }
