@@ -35,15 +35,15 @@ class tape : public media{
 };
 
 void book :: display(){
-    cout << "\nTitle: " << title << endl;
-    cout << "\nPages: " << pages << endl;
-    cout << "\nPrice: " << price << endl;
+    cout << "\nTitle: " << title;
+    cout << "\nPages: " << pages;
+    cout << "\nPrice: " << price;
 }
 
 void tape::display(){
-    cout << "\nTitle: " << title << endl;
-    cout << "\nPlay time: " << time << endl;
-    cout << "\nPrice: " << price << endl;
+    cout << "\nTitle: " << title;
+    cout << "\nPlay time: " << time;
+    cout << "\nPrice: " << price;
 }
 
 int main(){
