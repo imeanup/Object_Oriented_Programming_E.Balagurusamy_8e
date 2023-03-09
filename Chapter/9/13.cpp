@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <iomanip>
 
 using namespace std;
 
@@ -12,6 +13,7 @@ class media{
             strcpy(title, s);
             price = a;
         }
+        virtual void display(){}
 };
 
 class book : public media{
@@ -37,7 +39,45 @@ void book :: display(){
     cout << "\nPages: " << pages << endl;
     cout << "\nPrice: " << price << endl;
 }
-// TODO: display
+
 void tape::display(){
-    cout << endl;
+    cout << "\nTitle: " << title << endl;
+    cout << "\nPlay time: " << time << endl;
+    cout << "\nPrice: " << price << endl;
+}
+
+int main(){
+    char* title = new char[30];
+    float price, time;
+    int pages;
+
+    // Book details
+    cout << "BOOK DETAILS" << endl;
+    cout << "Title: "; cin >> title;
+    cout << "Price: "; cin >> price;
+    cout << "Pages: "; cin >> pages;
+
+    book book1(title, price, pages);
+
+    // Tape details 
+    cout << "TAPE DETAILS" << endl;
+    cout << "Title: "; cin >> title;
+    cout << "Price: "; cin >> price;
+    cout << "Play time(mins): "; cin >> time;
+
+    tape tape1(title, price, time);
+
+    media *list[2];
+
+    list[0] = &book1;
+    list[1] = &tape1;
+
+    cout << "MEDIA DETAILS" << endl;
+    cout <<  setw(10) << "BOOK" << endl;
+    list[0]->display();
+
+    cout << setw(10) << "TAPE" << endl;
+    list[1] -> display();
+
+    return 0;
 }

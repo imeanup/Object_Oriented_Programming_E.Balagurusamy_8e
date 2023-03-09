@@ -33,9 +33,4 @@ int main(){
 
 /*
 Src: https://www.exforsys.com/tutorials/c-plus-plus/c-pure-virtual-function-and-base-class.html
-The class Balagurusamy is the Base class. Inside main function, the class pointer *arra was decalred with a class name
- "Exforsys" which was not the name of the base class.
-Page 271, Program-9.14
-
-PS: It is sad to see that even after copying, the copier copied incorrectly.
 */
