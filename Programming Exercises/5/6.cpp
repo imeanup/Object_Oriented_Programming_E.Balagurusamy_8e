@@ -53,5 +53,18 @@ class Matrix{
 };
 
 int main(){
+    int m, n, p, q;
+    cout << "Enter the dimension of matrix A(m x n): ";
+    cin >> m >> n;
+    Matrix A(m,n);
+    A.read();
 
+    cout << "Enter the dimensions of matrix B (p x q): ";
+    cin >> p >> q;
+    Matrix B(p, q);
+    B.read();
+
+    if (n != p){
+        
+    }
 }
