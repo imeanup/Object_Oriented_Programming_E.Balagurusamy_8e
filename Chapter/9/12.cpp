@@ -25,7 +25,7 @@ int main(){
     Base B;
     Derived D;
     Base *bptr;
-    // cout << bptr << endl;
+    cout << bptr << endl;
 
     cout << "\nbptr points to Base" << endl;
     bptr = &B;
@@ -40,3 +40,21 @@ int main(){
 
     return 0;
 }
+
+/*
+0x0
+
+bptr points to Base
+0x16da8b3a0
+
+Display base 
+
+Show base
+
+bptr points to Derived
+0x16da8b398
+
+Display base 
+
+Show derived
+*/
