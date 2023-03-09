@@ -56,3 +56,14 @@ int main(){
 
     return 0;
 }
+
+/*
+Enter the principle amount: 100
+Enter the rate of interest: 10
+Enter the time period (in years): 2
+Please select an option 
+Option 1: Simple Interest
+Option 2: Compound Interest
+1
+Interest: 20
+*/
