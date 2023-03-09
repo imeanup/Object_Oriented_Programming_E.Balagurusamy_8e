@@ -70,7 +70,7 @@ int main(){
     }
 
     Matrix C = A*B;
-    
+
     cout << "Matrix A:" << endl;
     A.display();
     cout << "Matrix B:" << endl;
@@ -80,3 +80,40 @@ int main(){
 
     return 0;
 }
+
+/*
+Enter the dimension of matrix A(m x n): 3 3
+Enter the elements of the matrix:
+m[0][0] = 1
+m[0][1] = 2
+m[0][2] = 3
+m[1][0] = 1
+m[1][1] = 1
+m[1][2] = 1
+m[2][0] = 2
+m[2][1] = 4
+m[2][2] = 5
+Enter the dimensions of matrix B (p x q): 3 3
+Enter the elements of the matrix:
+m[0][0] = 3
+m[0][1] = 2
+m[0][2] = 1
+m[1][0] = 1
+m[1][1] = 2
+m[1][2] = 3
+m[2][0] = 3
+m[2][1] = 2
+m[2][2] = 1
+Matrix A:
+1 2 3 
+1 1 1 
+2 4 5 
+Matrix B:
+3 2 1 
+1 2 3 
+3 2 1 
+Matrix C = A * B:
+14 12 10 
+7 6 5 
+25 22 19 
+*/
