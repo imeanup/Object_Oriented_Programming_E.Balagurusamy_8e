@@ -43,7 +43,7 @@ void book :: display(){
 void tape::display(){
     cout << "\nTitle: " << title;
     cout << "\nPlay time: " << time;
-    cout << "\nPrice: " << price;
+    cout << "\nPrice: " << price << endl;
 }
 
 int main(){
