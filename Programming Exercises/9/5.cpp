@@ -67,3 +67,8 @@ int main(){
 
     return 0;
 }
+
+/*
+Sorted in descending order: 8 5 3 2 1 
+Sorted in ascending order: 1 2 3 5 8 
+*/
