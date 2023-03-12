@@ -75,5 +75,10 @@ int main(){
 }
 
 /*
-
+Enter the height and base of the triangle: 3 4
+Area of triangle: 6
+Enter the length and breadth of the rectangle: 3 4
+Area of rectangle: 12
+Enter the radius of the circle: 3  
+Area of circle: 28.2743
 */
