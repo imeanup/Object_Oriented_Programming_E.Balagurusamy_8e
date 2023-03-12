@@ -50,3 +50,14 @@ int main(){
     } while (choice == 'y');
     return 0;
 }
+
+/*
+Enter 'r' for rectangle, 't' for triangle: r       
+Enter the value of x and y (i.e. x y): 3 4
+Area of rectangle: 12
+Enter 'y' to continue, any other key to exit: y
+Enter 'r' for rectangle, 't' for triangle: r
+Enter the value of x and y (i.e. x y): 3 4
+Area of rectangle: 12
+Enter 'y' to continue, any other key to exit: 0
+*/
