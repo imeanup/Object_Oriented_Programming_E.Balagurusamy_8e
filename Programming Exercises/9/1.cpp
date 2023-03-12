@@ -10,7 +10,7 @@ class Shape{
             cin >> x >> y;
         }
         virtual void display_area(){
-
+            cout << "Area is undefined for the base class Shape." << endl;
         }
 };
 
