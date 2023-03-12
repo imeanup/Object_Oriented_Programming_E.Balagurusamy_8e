@@ -20,3 +20,7 @@ int main(){
     b->print();
     return 0;
 }
+
+/*
+it is Derived class
+*/
