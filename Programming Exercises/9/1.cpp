@@ -16,7 +16,7 @@ class Shape{
 
 class Triangle : public Shape{
     public:
-        void display_are(){
+        void display_area(){
             cout << "Area of triangle: " << (0.5 * x * y) << endl;
         }
 };
