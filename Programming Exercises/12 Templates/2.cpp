@@ -69,6 +69,17 @@ int main(){
     v1.display();
     v2.display();
     v3.display();
+
+    v1.multiplyElement(2);
+    v1.display();
+    Vector <int> v4(3);
+    v4.setElement(0, 'M');
+    v4.setElement(1, 'a');
+    v4.setElement(2, 'b');
+
+    v4.multiplyElement(1);
+    v4.display();
+
     return 0;
 }
 
@@ -76,4 +87,6 @@ int main(){
 (10, 20, 30, 40)
 (1.1, 2.2, 3.3, 4.4, 5.5)
 (Mike, Sandra, Barbara)
+(20, 40, 60, 80)
+(77, 97, 98)
 */
