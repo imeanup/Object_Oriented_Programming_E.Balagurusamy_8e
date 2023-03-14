@@ -22,3 +22,11 @@ int main(){
     fun(45);
     return 0;
 }
+
+/*
+Fun3: 25 28
+Fun2: 25 28
+Fun1: 25 28
+Fun3: 30 35
+Fun3: 45 35
+*/
