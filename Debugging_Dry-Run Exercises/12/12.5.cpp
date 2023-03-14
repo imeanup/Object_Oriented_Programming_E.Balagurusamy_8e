@@ -22,4 +22,6 @@ int main(){
     return 0;
 }
 /*
+1.23 and 123
+9.99 and 12.983
 */
