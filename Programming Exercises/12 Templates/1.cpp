@@ -1,4 +1,7 @@
+// Write a function template to find the minimum and maximum values by passing non type arguments to the template.
 #include <iostream>
+#include <algorithm>
+
 using namespace std;
 
 template <typename T, size_t N> 
@@ -23,9 +26,18 @@ int main(){
     auto minmax = findMinMax(arr);
     cout << "Minimum: " << minmax.first << endl;
     cout << "Maximum: " << minmax.second << endl;
+
+    cout << "Another approach using Algorithms-" << endl;
+
+    auto min_max = minmax_element(begin(arr), end(arr));
+    cout << "Min: " << *min_max.first << endl;
+    cout << "Max: " << *min_max.second << endl;
     return 0;
 }
 /*
 Minimum: -1
 Maximum: 19
+Another method using Algorithms-
+Min: -1
+Max: 19
 */
