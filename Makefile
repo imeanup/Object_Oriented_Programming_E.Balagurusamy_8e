@@ -1,7 +1,8 @@
 CXX = g++
 CXXFLAGS = -Wall -Wextra -pedantic -std=c++11
 
-SRCS = $(wildcard *.cpp)
+SRCDIRS = $(wildcard */)
+SRCS = $(wildcard $(addsuffix *.cpp,$(SRCDIRS)))
 OBJS = $(SRCS:.cpp=.o)
 EXEC = myprogram
 
