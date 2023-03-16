@@ -33,14 +33,11 @@ int main(){
 
         cin.ignore();
     }
-    cout << left << setw(10) << "NAME" << setw(10) << "CODE" << setw(10) << "COST" << endl;
+    cout << left << setw(20) << "NAME" << setw(10) << "CODE" << setw(10) << "COST" << endl;
 
+    // Print the items
     for (int i = 0; i < names.size(); i++) {
-        cout << left << setw(20) << names[i] << setw(10) << codes[i] << right << fixed << setprecision(2) << setw(10) << costs[i];
-        
-        // Fill the unused space with hyphens
-        int fill_width = 40 - (names[i].length() + 10 + 10);
-        cout << setfill('-') << setw(fill_width) << "" << setfill(' ') << endl;
+        cout << left << setw(20) << names[i] << setw(10) << codes[i] << right << fixed << setprecision(2) << setw(10) << costs[i] << endl;
     }
     return 0;
 }
