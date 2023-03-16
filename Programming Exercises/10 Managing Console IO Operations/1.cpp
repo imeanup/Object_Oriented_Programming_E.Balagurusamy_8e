@@ -36,7 +36,7 @@ int main(){
     cout << left << setw(10) << "NAME" << setw(10) << "CODE" << setw(10) << "COST" << endl;
 
     for (int i = 0; i < names.size(); i++){
-        cout << left << setw(10) << names[i] << setw(10) << codes[i] << setw(10) << costs[i] << endl;
+        cout << left << setw(10) << names[i] << setw(10) << codes[i] << right << fixed << setprecision(2) << setw(10) << costs[i] << endl;
     }
     return 0;
 }
