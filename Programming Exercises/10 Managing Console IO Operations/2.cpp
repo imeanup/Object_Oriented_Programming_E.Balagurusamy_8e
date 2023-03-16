@@ -48,11 +48,11 @@ Enter item details (name, code, cost):
 Name (or empty to stop): Turbo C++
 Code: 1001
 Cost: 250.95
-Name (or empty to stop): C Primer   
+Name (or empty to stop): Primer C
 Code: 905
 Cost: 95.70
 Name (or empty to stop): 
-NAME      CODE      COST      
-Turbo C++ 1001      250.95    
-C Primer  905       95.7  
+NAME                CODE            COST
+Turbo C++-----------1001----------250.95
+Primer C------------905------------95.70
 */
