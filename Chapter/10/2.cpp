@@ -17,3 +17,20 @@ int main(){
     cout << "New city name: " << city << endl;
     return 0;
 }
+
+/*
+Enter the city name: Delhi
+City name: Delhi
+Enter city name again: 
+City name now: 
+Enter another city name: Chennai
+New city name: Chennai
+
+** Notice the output here:
+Enter the city name: New Delhi
+City name: New
+Enter city name again: 
+City name now:  Delhi 
+Enter another city name: Greater Bombay
+New city name: Greater Bombay
+*/
