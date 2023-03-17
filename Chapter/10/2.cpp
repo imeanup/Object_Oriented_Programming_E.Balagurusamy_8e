@@ -8,7 +8,7 @@ int main(){
     cin >> city;
     cout << "City name: " << city << endl;
 
-    cout << "Enter city name again: ";
+    cout << "Enter city name again: " << endl;
     cin.getline(city, size);
     cout << "City name now: " << city << endl;
 
