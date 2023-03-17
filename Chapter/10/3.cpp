@@ -4,12 +4,13 @@
 using namespace std;
 
 int main(){
-    char *string1 = "C++ ";
-    char *string2 = "Programming";
+    // ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+    const char *string1 = "C++ ";
+    const char *string2 = "Programming";
     int m = strlen(string1);
     int n = strlen(string2);
 
-    for (int i = 1; i < n; i++){
+    for (int i = 1; i <= n; i++){
         cout.write(string2, i);
         cout << endl;
     }
