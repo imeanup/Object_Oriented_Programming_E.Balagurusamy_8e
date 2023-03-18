@@ -6,25 +6,26 @@
 
 using namespace std;
 
-int main(){
+int main() {
     string line;
-    ifstream inFile("input.txt");
-    ofstream outFile("output.txt");
-
-    if (inFile.is_open() && outFile.is_open()) {
-        string line;
-        while (getline(inFile, line)) {
-            string::iterator new_end = unique(line.begin(), line.end(), [](char lhs, char rhs) { return lhs == rhs && lhs == ' '; });
-            line.erase(new_end, line.end());
-            outFile << line << endl;
+    ifstream myfile("input.txt");
+    ofstream outfile("output.txt");
+    if (myfile.is_open()) {
+        while (getline(myfile, line)) {
+            string newLine = "";
+            for (int i = 0; i < line.length(); i++) {
+                if (line[i] == ' ' && line[i + 1] == ' ') {
+                    continue;
+                }
+                newLine += line[i];
+            }
+            outfile << newLine << endl;
         }
-        inFile.close();
-        outFile.close();
-
-        cout << "Conversion completed successfully." << endl;
-    } else {
-        cout << "Failed to open input or output file." << endl;
+        myfile.close();
+        outfile.close();
     }
-
+    else {
+        cout << "Unable to open file";
+    }
     return 0;
 }

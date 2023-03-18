@@ -1,0 +1,7 @@
+Hello, World!
+Find the steps as we follow:
+1. reads
+2. writes
+3. search
+4. replaced
+5. delete
