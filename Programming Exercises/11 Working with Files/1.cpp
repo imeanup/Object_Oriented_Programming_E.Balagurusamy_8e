@@ -7,5 +7,9 @@
 using namespace std;
 
 int main(){
+    string line;
+    ifstream inFile("input.txt");
+    ofstream outFile("output.txt");
+
     
 }
