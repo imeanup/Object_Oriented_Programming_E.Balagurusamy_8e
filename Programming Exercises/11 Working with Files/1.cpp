@@ -25,7 +25,7 @@ int main() {
         outfile.close();
     }
     else {
-        cout << "Unable to open file";
+        cout << "Unable to open file" << endl;
     }
     return 0;
 }
