@@ -14,3 +14,7 @@ int main(){
     cout << "\nNumber of characters = " << count << endl;
     return 0;
 }
+
+/*
+Program 10.1 Character I/O with get() and put()
+*/

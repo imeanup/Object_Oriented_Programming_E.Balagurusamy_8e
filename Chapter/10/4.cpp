@@ -34,6 +34,8 @@ int main(){
 }
 
 /*
+Program 10.4 Specifying Field Size with width()
+
 ITEMS    COST    TOTAL VALUE
    10      75            750
     8     100            800

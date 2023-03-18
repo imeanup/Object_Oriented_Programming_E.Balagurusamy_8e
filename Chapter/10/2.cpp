@@ -19,6 +19,8 @@ int main(){
 }
 
 /*
+Program 10.2 Reading Strings with getline()
+
 Enter the city name: Delhi
 City name: Delhi
 Enter city name again: 

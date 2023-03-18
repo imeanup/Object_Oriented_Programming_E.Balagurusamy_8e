@@ -25,6 +25,8 @@ int main(){
 }
 
 /*
+Program 10.3 Displaying Strings with write()
+
 P
 Pr
 Pro
