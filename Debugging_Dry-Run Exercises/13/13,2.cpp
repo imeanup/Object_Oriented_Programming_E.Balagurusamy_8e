@@ -15,7 +15,7 @@ int main(){
     catch(int arg1){
         cout << "Exception caught first" << endl;
     }
-    catch(int arg2){
+    catch(float arg2){
         cout << "Exception caught second" << endl;
     }
     cout << "End of program" << endl;
