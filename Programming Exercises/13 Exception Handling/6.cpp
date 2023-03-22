@@ -8,10 +8,9 @@ e) Appropriate catch block to handle the exception thrown.
 */
 
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
-void readNumbers(double a, double b){
+void readNumbers(double &a, double &b){
     cout << "Enter two numbers: ";
     if(!(cin >> a >> b)){
         throw "Invalid input. Please enter two numbers.";
@@ -37,3 +36,15 @@ int main(){
     }
     return 0;
 }
+
+/*
+Enter two numbers: 4.0 1.99
+The result of dividing 4 by 1.99 is: 2.01005
+
+Enter two numbers: 2 4.9
+The result of dividing 2 by 4.9 is: 0.408163
+
+Enter two numbers: 4 a
+Invalid input. Please enter two numbers.
+*/
+
