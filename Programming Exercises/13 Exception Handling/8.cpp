@@ -5,9 +5,9 @@
 
 using namespace std;
 
-class MyException: public exception{
+class MyException : public exception {
     public:
-        const char *what() const noexcept override{
+        const char* what() const noexcept override {
             return "My custom exception";
         }
 };
@@ -26,4 +26,11 @@ int main(){
 /*
 This code is a reference from the following:
 https://stackoverflow.com/questions/8152720/correct-way-to-inherit-from-stdexception
+*/
+
+/*
+// Compling instruction: Use g++ -std=c++11 filename.cpp -o outputfilename.cpp
+
+Inside try block
+My custom exception
 */
