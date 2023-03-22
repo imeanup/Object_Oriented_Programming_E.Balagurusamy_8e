@@ -1,0 +1,1 @@
+// Write a program that demonstrates how certain exception types are not allowed to be thrown.
