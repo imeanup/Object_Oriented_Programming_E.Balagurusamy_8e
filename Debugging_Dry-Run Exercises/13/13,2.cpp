@@ -12,12 +12,14 @@ int main(){
         r = a/b;
         cout << "Result = " << r << endl;
     }
-    catch(int arg){
-        cout << "Exception caught second" << endl;
-    }
-    catch(...){
+    catch(int arg1){
         cout << "Exception caught first" << endl;
+    }
+    catch(int arg2){
+        cout << "Exception caught second" << endl;
     }
     cout << "End of program" << endl;
     return 0;
 }
+
+// terminating with uncaught exception of type char const*

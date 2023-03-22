@@ -7,7 +7,7 @@ int main(){
     b = 0;
     try{
         if (b == 0){
-            throw 0;
+            throw "divisor is 0";
         }
         r = a/b;
         cout << "Result = " << r << endl;
@@ -15,9 +15,8 @@ int main(){
     catch(int arg){
         cout << "Exception caught second" << endl;
     }
-    catch(...){
-        cout << "Exception caught first" << endl;
-    }
     cout << "End of program" << endl;
     return 0;
 }
+
+// terminating with uncaught exception of type char const*
