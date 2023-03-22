@@ -1,0 +1,1 @@
+// Write a program that illustrates the application of multiple catch statements.
