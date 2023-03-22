@@ -15,10 +15,19 @@ int main(){
     catch(int arg1){
         cout << "Exception caught first" << endl;
     }
-    catch(float arg2){
+    catch(int arg2){
         cout << "Exception caught second" << endl;
     }
     cout << "End of program" << endl;
     return 0;
 }
 
+/*
+Two catch blocks that catch exceptions of the same type (int).
+
+13,2.cpp:18:11: warning: exception of type 'int' will be caught by earlier handler [-Wexceptions]
+    catch(int arg2){
+          ^
+13,2.cpp:15:11: note: for type 'int'
+    catch(int arg1){
+*/
