@@ -22,4 +22,3 @@ int main(){
     return 0;
 }
 
-// terminating with uncaught exception of type char const*
