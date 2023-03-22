@@ -23,4 +23,5 @@ int main(){
     catch (char t){
         cout << "Exception Caught: Division is less than 1" << endl;
     }
+    return 0;
 }
