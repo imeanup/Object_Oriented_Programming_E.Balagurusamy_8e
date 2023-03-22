@@ -1,0 +1,1 @@
+// Write a program to create your own exception by inheriting exception class functionality.
