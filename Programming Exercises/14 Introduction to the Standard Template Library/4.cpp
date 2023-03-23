@@ -1,1 +1,2 @@
-// Redo the Exercise 4.17 using a set.
+// Redo the Exercise 14.17 using a set. (I believe it was Ex. 14.1)
+
