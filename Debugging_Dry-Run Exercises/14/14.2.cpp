@@ -19,9 +19,10 @@ int main(){
         v1.swap(v2);   
     }
     
-    for (int y = 0; y < v1.size(); y++){
-        cout << "V1: " << v1[y] << " ";
-        cout << "V2: " << v2[y] << " ";
+    for (int y = 0; y < v2.size(); y++){
+        // cout << "V1: " << v1[y] << " ";
+        cout << v2[y] << " ";
     }
+    cout << endl;
     return 0;
 }
