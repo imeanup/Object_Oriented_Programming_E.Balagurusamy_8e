@@ -1,4 +1,4 @@
-// TODO: Write a program to compare two fractional numbers by overloading the relational operator (==, !=, >=, <=). 
+// Write a program to compare two fractional numbers by overloading the relational operator (==, !=, >=, <=). 
 
 #include <iostream>
 using namespace std;

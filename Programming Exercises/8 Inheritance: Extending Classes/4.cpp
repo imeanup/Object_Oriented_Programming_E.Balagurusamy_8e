@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-// TODO: Staff class
+// Staff class
 class Staff{
     protected:
         int code;
@@ -20,7 +20,7 @@ class Staff{
         }
 };
 
-// TODO: Educational information class
+//  Educational information class
 class Education: public Staff{
     protected:
         string education;
@@ -36,7 +36,7 @@ class Education: public Staff{
         }
 };
 
-// TODO: Derived class Teacher
+//  Derived class Teacher
 class Teacher : public Education {
     string subject;
     string publication;
@@ -54,7 +54,7 @@ class Teacher : public Education {
             cout << "Publication: " << publication << endl;
         }
 };
-// TODO: Dervied class Officer
+//  Dervied class Officer
 class Officer : public Education{
     char grade;
     public:
@@ -67,10 +67,9 @@ class Officer : public Education{
             cout << "Grade: " << grade << endl;
         }
 };
-// TODO: main
 
 int main(){
-    // TODO: Create objects and set member variables
+    // Create objects and set member variables
     Teacher t;
     t.setCode(1001);
     t.setName("John Doe");
