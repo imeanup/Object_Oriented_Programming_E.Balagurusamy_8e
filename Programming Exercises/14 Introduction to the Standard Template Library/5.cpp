@@ -13,15 +13,15 @@ int main(){
 
     string model;
     int sales;
-    cout << "Enter the model and unit sales (enter 'done' when finished): ";
+    cout << "Enter the model and unit sales (enter '-1' when finished): ";
     while (cin >> model){
-        if (model == "done"){
+        if (model == "-1"){
             break;
         }
         cin >> sales;
         table[model] += sales;
     }
-
+    
     string target_model;
     double unit_cost;
     cout << "Enter model name and unit cost: ";
