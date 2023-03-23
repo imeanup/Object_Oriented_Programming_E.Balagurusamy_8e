@@ -13,14 +13,14 @@ int main(){
 
     string model;
     int sales;
-    while (cin >> model >> sales){
-        table[model] += sales;
-    }
-    // table["Model A"] = 100;
-    // table["Model B"] = 200;
-    // table["Model C"] = 300;
-    // table["Model D"] = 400;
-    // table["Model E"] = 500;
+    // while (cin >> model >> sales){
+    //     table[model] += sales;
+    // }
+    table["Model A"] = 100;
+    table["Model B"] = 200;
+    table["Model C"] = 300;
+    table["Model D"] = 400;
+    table["Model E"] = 500;
 
     string target_model;
     double unit_cost;
