@@ -24,5 +24,9 @@ int main(){
 }   
 
 /*
+compling instruction: g++ -std=c++11 filename.cpp
+
+output:
+
 1 2 3 4 5 6
 */
