@@ -33,9 +33,9 @@ int main(){
 
     string search_name = "Charlie";
     for (it = phone_lit.begin(); it != phone_lit.end(); ++it){
-        // if (strcmp(it->first_name, search_name)){
-
-        // }
+        if (strcmp(it->first_name.c_str(), search_name.c_str()) == 0){
+            // ...
+        }
         if (it->first_name == search_name){
             cout << "Roll Number: " << it->roll_number << endl;
             break;
