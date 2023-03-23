@@ -10,11 +10,11 @@
 using namespace std;
 
 int main(){
-    vector <int> even = {2, 4, 6};
+    int even[] = {2, 4, 6};
     list <int> odd = {1, 3, 5};
     vector<int> merged(6);
 
-    merge(even.begin(), even.end(), odd.begin(), odd.end(), merged.begin());
+    merge(even, even + 3, odd.begin(), odd.end(), merged.begin());
 
     for (int i = 0; i < merged.size(); i++){
         cout << merged[i] << ' ';
