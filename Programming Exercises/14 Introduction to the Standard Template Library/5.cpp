@@ -13,25 +13,21 @@ int main(){
 
     string model;
     int sales;
-    // while (cin >> model >> sales){
-    //     table[model] += sales;
-    // }
-    table["A"] = 100;
-    table["B"] = 200;
-    table["C"] = 300;
+    cout << "Enter the model and unit sales (enter 'done' when finished): ";
+    while (cin >> model){
+        if (model == "done"){
+            break;
+        }
+        cin >> sales;
+        table[model] += sales;
+    }
 
-    // get user input for unit cost and model name
+    string target_model;
     double unit_cost;
-    std::cout << "Enter unit cost: ";
-    std::cin >> unit_cost;
+    cout << "Enter model name and unit cost: ";
+    cin >> target_model >> unit_cost;
 
-    std::string model_name;
-    std::cout << "Enter model name: ";
-    std::cin >> model_name;
-
-    // calculate and display total value of the model sold
-    double total_value = table[model_name] * unit_cost;
-    std::cout << "Total value of " << model_name << " sold: " << total_value << std::endl;
-
+    double total_value = table[target_model] * unit_cost;
+    cout << "Total value of " << table[target_model] << " unit sold for " << target_model << " is " << total_value << endl;
     return 0;
 }
