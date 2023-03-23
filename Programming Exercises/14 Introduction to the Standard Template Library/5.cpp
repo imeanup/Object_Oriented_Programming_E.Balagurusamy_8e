@@ -21,7 +21,10 @@ int main(){
         cin >> sales;
         table[model] += sales;
     }
-    
+    cout << "Car Sales" << endl;
+    for (const auto& pair : table) {
+        cout << pair.first << ": " << pair.second << endl;
+    } 
     string target_model;
     double unit_cost;
     cout << "Enter model name and unit cost: ";
