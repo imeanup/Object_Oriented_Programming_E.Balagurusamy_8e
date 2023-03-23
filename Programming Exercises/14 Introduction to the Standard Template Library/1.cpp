@@ -19,5 +19,16 @@ void display(vector<int> &v){
 }
 
 int main(){
-    vector <int> v;
+    vector <int> v(10);
+    v[0] = 0;
+    v[9] = 9;
+    for (int i = 1; i < 9; i++){
+        v[i] = 1;
+    }
+    display(v);
+    return 0;
 }
+
+/*
+0 1 1 1 1 1 1 1 1 9 
+*/
