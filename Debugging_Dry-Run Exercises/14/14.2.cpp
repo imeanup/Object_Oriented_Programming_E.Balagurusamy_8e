@@ -15,9 +15,10 @@ int main(){
         cout << "Vectors are equal";
     }
     else{
-        cout << "Vectors are unequal";
-        v1.swap(20);
+        cout << "Vectors are unequal" << endl; 
+        v1.swap(v2);   
     }
+    
     for (int y = 0; y < v1.size(); y++){
         cout << "V1: " << v1[y] << " ";
         cout << "V2: " << v2[y] << " ";
