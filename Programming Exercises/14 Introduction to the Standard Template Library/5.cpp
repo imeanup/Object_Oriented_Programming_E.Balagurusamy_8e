@@ -34,3 +34,19 @@ int main(){
     cout << "Total value of " << table[target_model] << " unit sold for " << target_model << " is " << total_value << endl;
     return 0;
 }
+
+/*
+g++ -std=c++11 5.cpp
+./a.out 
+
+Enter the model and unit sales (enter '-1' when finished): A 100
+B 200
+C 300
+-1
+Car Sales
+A: 100
+B: 200
+C: 300
+Enter model name and unit cost: A 50
+Total value of 100 unit sold for A is 5000
+*/
