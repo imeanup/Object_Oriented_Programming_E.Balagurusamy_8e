@@ -11,7 +11,7 @@ int main() {
     cout << "Initial value of x: " << x << endl;
     cout << "Value of p: " << p << endl;
     (*reinterpret_cast<int*>(p))++;
-    cout << "Value of x after increment: " << x << endl;
+    cout << "Value of x after increment: " << *p << endl;
     
     return 0;
 }
