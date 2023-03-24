@@ -11,6 +11,9 @@ int main() {
     std::cout << "x = " << x << std::endl;
     std::cout << "p = " << p << std::endl;
 
+    // Initialize the value pointed to by p
+    *p = 20;
+
     // Increment p using reinterpret_cast
     p = reinterpret_cast<int*>(reinterpret_cast<char*>(p) + sizeof(int));
 
