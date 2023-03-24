@@ -23,3 +23,9 @@ int main(){
     cout << "Number of occurrence of " << ch << " is " << count << endl;
     return 0;
 }
+
+/*
+Enter the line of text: Hello World! This is Programming in CPP.     
+Enter the character to be counted: l
+Number of occurrence of l is 3
+*/
