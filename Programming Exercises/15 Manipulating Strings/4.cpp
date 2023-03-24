@@ -19,3 +19,8 @@ int main(){
     cout << "Modified text: " << text << endl;
     return 0;
 }
+
+/*
+Enter a line of text: Hello World! This is Object Oriented Programming using C++.
+Modified text: Hello_World!_This_is_Object_Oriented_Programming_using_C++.
+*/
