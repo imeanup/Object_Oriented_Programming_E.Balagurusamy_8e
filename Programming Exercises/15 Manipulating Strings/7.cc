@@ -1,5 +1,5 @@
 /*
-Write a program that reads a list of countries in random order 
+Write a program that reads a list of countries in random order and displays them in alphabetical order. Use comparison operators and functions.
 */
 
 #include <iostream>
@@ -8,5 +8,6 @@ Write a program that reads a list of countries in random order
 using namespace std;
 
 int main(){
+
     return 0;
 }
