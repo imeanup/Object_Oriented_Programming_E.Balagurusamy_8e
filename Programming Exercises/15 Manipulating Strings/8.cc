@@ -27,7 +27,8 @@ int main() {
                 cout << s[k];
                 // if (j < n) {
                 //     k++;
-                // } else {
+                // } 
+                // else {
                 //     k--;
                 // }
             }
