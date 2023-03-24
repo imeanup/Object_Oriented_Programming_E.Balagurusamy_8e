@@ -26,3 +26,18 @@ int main(){
     }
     return 0;
 }
+
+/*
+compling: g++ -std=c++11 filename.cpp -o output_filename
+
+Enter the city name (or '-1' to exit): Baltimore
+Enter the city name (or '-1' to exit): Beaumont
+Enter the city name (or '-1' to exit): Alabama
+Enter the city name (or '-1' to exit): California
+Enter the city name (or '-1' to exit): Dumas
+Enter the city name (or '-1' to exit): -1
+Cities starting with B or C are: 
+Baltimore
+Beaumont
+California
+*/
