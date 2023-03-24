@@ -15,8 +15,8 @@ using namespace std;
 
 int main() {
     string s("123456789");
-    int n = s.size();
-    int m = 2*n - 1;
+    int n = s.size(); // length
+    int m = 2*n - 1; // width
     for (int i = 1; i <= n; i++) {
         int k = i - 1;
         for (int j = 1; j <= m; j++) {
