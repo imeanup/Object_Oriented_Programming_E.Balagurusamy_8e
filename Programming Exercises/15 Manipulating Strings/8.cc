@@ -9,9 +9,9 @@ write a program that displays the following:
   4 5 6 7 6 5 4
 5 6 7 8 9 8 7 6 5
 */
-
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 int main() {
