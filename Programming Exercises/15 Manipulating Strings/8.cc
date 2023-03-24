@@ -17,7 +17,7 @@ int main() {
     string s("123456789");
     int n = s.size(); // length
     int m = 2*n - 1; // width
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= 5; i++) {
         int k = i - 1;
         // cout << k;
         for (int j = 1; j <= m; j++) {
@@ -25,15 +25,23 @@ int main() {
                 cout << " ";
             } else {
                 cout << s[k];
-                // if (j < n) {
-                //     k++;
-                // } 
-                // else {
-                //     k--;
-                // }
+                if (j < n) {
+                    k++;
+                } 
+                else {
+                    k--;
+                }
             }
         }
         cout << endl;
     }
     return 0;
 }
+
+/*
+        1        
+       232       
+      34543      
+     4567654     
+    567898765 
+*/
