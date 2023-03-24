@@ -3,22 +3,15 @@ Write a program in which increment in pointer to integer should demonstrate incr
 */
 
 #include <iostream>
+using namespace std;
 
 int main() {
-    int x = 10;
+    int x = 5;
     int* p = &x;
-
-    std::cout << "x = " << x << std::endl;
-    std::cout << "p = " << p << std::endl;
-
-    // Initialize the value pointed to by p
-    *p = 20;
-
-    // Increment p using reinterpret_cast
-    p = reinterpret_cast<int*>(reinterpret_cast<char*>(p) + sizeof(int));
-
-    std::cout << "p (after increment) = " << p << std::endl;
-    std::cout << "*p (after increment) = " << *p << std::endl;
-
+    cout << "Initial value of x: " << x << endl;
+    cout << "Value of p: " << p << endl;
+    (*reinterpret_cast<int*>(p))++;
+    cout << "Value of x after increment: " << x << endl;
+    
     return 0;
 }
