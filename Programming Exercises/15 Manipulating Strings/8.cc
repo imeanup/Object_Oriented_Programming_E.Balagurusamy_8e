@@ -15,7 +15,7 @@ write a program that displays the following:
 using namespace std;
 
 int main() {
-    string s("123456789");
+    string s("abcdefghi");
     int n = s.size();
     int k = 0;
     for (int i = 1; i <= n; i += 2) {
