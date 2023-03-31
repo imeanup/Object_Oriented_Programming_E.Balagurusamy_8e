@@ -24,7 +24,7 @@ int main() {
             if (j <= n - i || j >= n + i) {
                 cout << " ";
             } else {
-                cout << " " << s[k];
+                cout << s[k];
                 if (j < n) {
                     k++;
                 } 
