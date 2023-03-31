@@ -11,6 +11,7 @@ write a program that displays the following:
 */
 #include <iostream>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -22,7 +23,7 @@ int main() {
         // cout << k;
         for (int j = 1; j <= m; j++) {
             if (j <= n - i || j >= n + i) {
-                cout << " ";
+                cout << "*";
             } else {
                 cout << s[k];
                 if (j < n) {
