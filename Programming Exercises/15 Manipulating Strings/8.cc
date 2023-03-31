@@ -20,7 +20,6 @@ int main() {
     int m = 2*n - 1; // width
     for (int i = 1; i <= 5; i++) {
         int k = i - 1;
-        // cout << k;
         for (int j = 1; j <= m; j++) {
             if (j <= n - i || j >= n + i) {
                 cout << "*";
