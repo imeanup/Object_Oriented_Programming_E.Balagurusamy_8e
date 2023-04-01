@@ -14,3 +14,10 @@ int main(){
     }
     return 0;
 }
+
+/*
+Enter String: ObjectcejbO
+
+Enter String: Object
+Not Same
+*/
