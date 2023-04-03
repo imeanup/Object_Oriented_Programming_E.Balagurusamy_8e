@@ -1,4 +1,4 @@
-### `Object Oriented Programming with C++ by E Balagurusamy 8e`
+### `Object Oriented Programming with C++ by E Balagurusamy 8e Solution`
 
 [![E Balagurusamy](https://m.media-amazon.com/images/I/41sbWdpTgRL._AC_SX60_CR,0,0,60,60_.jpg)](https://amzn.eu/d/1fsgTX1)
 
