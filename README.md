@@ -13,9 +13,7 @@ Each exercise solution has been executed here to help readers understand and app
 
 ### Contributing
 This repo is open-source and welcomes contributions from the community. Contributors are encouraged to add their own code or to modify existing ones to improve the overall quality of the programming exercises.
-
-### Authors
-Anupam. 
+ 
 
 ### License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/imeanup/Object-Oriented-Programming-with-Cpp/blob/main/LICENSE.md) file for details.
